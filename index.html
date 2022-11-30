@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Ropa,Perfumes,Accesorios,Bijouterie">
+	<meta name="description" content="Tienda Lika es un negocio dedicado a la venta de indumentaria y demas productos para la dama y el caballero">
+	<meta name="author" content="Tomas Sigel">
+	<meta name="robots" content="index"> <!--si la pagina esta indexada o no (para que aparezca en el buscador)-->
+	<link rel="icon" href="imagenes/logolika.ico">
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/919ad6754f.js" crossorigin="anonymous"></script> <!-- script para poder usar iconos-->
+	<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script> <!--para el live reload del sublime-->
+	<title>Tienda Lika</title>
+</head>
+<body>
+	<header>
+		<nav class="menu">
+				<label for="check" class="checkbtn">&#9776;</label>
+      			<input type="checkbox" id="check"/>
+			<ul class="menulist" style="list-style-type:none"> <!--para sacar los puntitos de la lista-->
+				<li class="list"><i class="fas fa-house"></i><a href="index.html">Inicio</a></li>
+				<li class="list"><i class="fas fa-shirt"></i>
+					<a href="html/indumentaria.html">Indumentaria</a>
+					<ul class="menuropas">
+						<li><a href="#">hombres</a></li>
+						<li><a href="#">mujeres</a></li>
+						<li><a href="#">niños</a></li>
+					</ul>
+				</li>
+				<li class="list"><i class="fa-solid fa-glasses"></i>
+					<a href="html/accesorios.html">Accesorios</a>
+					<ul class="menuaccesorio">
+						<li><a href="#">mochilas</a></li>
+						<li><a href="#">carteras</a></li>
+						<li><a href="#">pañuelos</a></li>
+						<li><a href="#">billeteras</a></li>
+					</ul>
+				</li>
+				<li class="list"><i class="fas fa-ring"></i>
+					<a href="html/bijouterie.html">Bijouterie</a>
+					<ul class="menubijouteries">
+						<li><a href="#">pulceras</a></li>
+						<li><a href="#">cadenitas</a></li>
+						<li><a href="#">anillos</a></li>
+					</ul>
+				</li>
+				<li class="list"><i class="fas fa-spray-can-sparkles"></i><a href="html/perfumes.html">Perfumes</a></li>
+			</ul>
+			<div class="padre-icon-search">
+				<div class="icon">
+					<img src="imagenes/logolika.png" alt="Logotipo Lika" title="Tienda Lika">
+				</div>
+				<form class="padre-search">
+					<input class="search" type="search" PLACEHOLDER="buscar...">
+				</form>
+			</div>	
+		</nav>
+	</header>
+
+	<main>
+		<div class="friday">
+			<img src="imagenes/menuinicio/publinicio.jpg"> <!--de prueba-->
+		</div>
+		<div class="h1">
+			<h1>¡Aprovecha las ofertas, no te quedes con las ganas!</h1>
+		</div>
+		<div class="ofertas">
+			<div id="oferta1">
+				<h3>Mochilas</h3>
+				<h4>10% OFF</h4>
+				<a href="#">Ver productos</a>
+			</div>
+			<div id="oferta2">
+				<h3>Conjuntos</h3>
+				<h4>15% OFF</h4>
+				<a href="#">Ver productos</a>
+			</div>
+			<div id="oferta3">
+				<h3>Carteras</h3>
+				<h4>10% OFF</h4>
+				<a href="#">Ver productos</a>
+			</div>
+		</div>
+		<div class="ofertas2">
+			<div id="oferta4">
+				<h3>conjunto boca</h3>
+				<h4>Desde 10000$</h4>
+				<a href="#">Ver productos</a>
+			</div>
+			<div id="oferta5">
+				<h3>jogging</h3>
+				<h4>Desde 3000$</h4>
+				<a href="#">Ver productos</a>
+			</div>
+			<div id="oferta6">
+				<h3>Remeras</h3>
+				<h4>Desde 5000$</h4>
+				<a href="#">Ver productos</a>
+			</div>
+		</div>
+	</main>
+
+	<footer class="pie">
+		<div class="grupo1">
+			<div class="logotipo">
+				<figure>
+					<a href="#">
+						<img src="imagenes/logolika.png" alt="Logotipo Lika" title="Tienda Lika">
+					</a>
+				</figure>
+			</div>
+			<div class="nosotros">
+				<h2>SOBRE NOSOTROS</h2>
+				<p>Somos una tienda que hace mas de 10 años que estamos en este rubro</p>
+				<p>dedicandonos a vender los mejores productos para el usuario</p>
+			</div>
+			<div class="redesociales">
+				<h2>CONTACTANOS</h2>
+				<div class="redesocialeshijo">
+					<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-instagram"></a>
+					<a href="https://api.whatsapp.com/send?phone=542323649699" class="fa-brands fa-whatsapp" target="_BLANK"></a>
+					<a href="html/contacto.html" class="fa fa-envelope"></a>
+				</div>
+			</div>
+		</div>
+		<div class="grupo2">
+			<small>&copy; 2022 <b>Tienda Lika<b> - Todos los derechos reservados</small>
+		</div>
+	</footer>
+</body>
+</html>

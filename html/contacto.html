@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../css/style.css"/>
+	<meta charset="utf-8">
+	<meta name="keywords" content="Ropa,Perfumes,Accesorios,Bijouterie">
+	<meta name="description" content="Tienda Lika es un negocio dedicado a la venta de indumentaria y demas productos para la dama y el caballero">
+	<meta name="author" content="Tomas Sigel">
+	<meta name="robots" content="index"> <!--si la pagina esta indexada o no (para que aparezca en el buscador)-->
+	
+	<link rel="icon" href="../imagenes/logolika.ico">
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/919ad6754f.js" crossorigin="anonymous"></script> <!-- script para poder usar iconos-->
+	<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script> <!--para el live reload-->
+	<title>Tienda Lika</title>
+</head>
+<body>
+<section class="fondocontacto">
+	<div class="formulario">
+		<form action="https://formspree.io/f/mdojprey" method="POST">
+			<fieldset class="fieldset">
+				<legend>Datos basicos</legend>
+				<div>
+					<label class="label" for="nombre">Nombre</label>
+					<input type="text" id="nombre" name="nombre" placeholder="Escriba aqui su nombre" required="">
+				</div>
+				<div>
+					<label class="label" for="email">E-mail</label>
+					<input type="email" id="email" name="email" placeholder="Escriba aqui su email" required="">
+				</div>
+				<div class="textareayboton">
+					<label class="label"for="textarea">Comentario</label>
+					<textarea id="textarea" name="mensaje" placeholder="Escriba aqui su consulta" required=""></textarea>
+					<input class="consultar" type="submit" name="consultar" value="consultar">
+				</div>
+			</fieldset>
+		</form>
+		<div class="volverainicio">
+			<a href="../index.html">|Volver a inicio|</a>
+		</div>
+	</div>
+</section>
+</body>
+</html>

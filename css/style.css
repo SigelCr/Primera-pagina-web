@@ -1,0 +1,1585 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	border: px solid black; /*le tuve que poner esto xq sino la imagen de fondo quedaba mal, total ni se nota*/
+	opacity: 0.9; /*convinado con el blur la imagen de fondo se ve una joyita, PERO las imagenes se ven un poquitin transparente, espeor que no moleste mas adelante*/
+	background-image: url(../imagenes/fondo.jpg);
+	backdrop-filter: blur(100px); /*opacidad*/
+	background-position: top;
+	/*background-attachment: fixed;*/ /*mas copado sin que quede fijo*/
+	/*background-size: contain;*/ /*me gusta mas sin esto*/
+	overflow-x: hidden; /*scroll horizontal*/
+	
+}
+
+.checkbtn {
+	display: none;
+	color: white;
+	float: left;
+	font-size: 30px;
+	margin: 20px; 
+	cursor: pointer;
+}
+
+#check {
+	display: none;
+}
+
+/*---------HEADER---------------------------------------------------------------------*/
+.menu {
+	display: flex;
+	background-color: transparent; /*color etc del fondo del header seria*/
+	padding: 10px;
+	flex-direction:row-reverse; /*aca inverti la posicion que tenian los elementos dentro de la caja azul (que seria todo el menu)*/
+	justify-content: center; /*al final le puse center xq le puse un margin right a padreinput aca con betwen al ser la caja contenedora y tener adentro 2 cajas contenedoras mas, 
+									las separo, a una la puso hacia la izquierda y la otra hacia la derecha*/
+	flex-wrap: wrap-reverse;
+	background-color: black;
+	
+	
+
+	/*border: 1px solid blue;*/
+
+}
+
+.menulist {
+
+	display: flex;
+	align-items: center;
+	font-family: Amatic SC;
+	font-size: 25px; /*tamaño de fuente*/
+	background-color: transparent;
+	/*border: 1px groove red;*/
+
+}
+/*menu vertical de indumentaria*/
+.menuropas {
+	z-index: 80;
+	position: absolute;
+	border:1px solid rgb(50,50,50);
+	list-style: none;
+	margin: 20px;
+	margin-top: 30px;
+	padding-left: 25px;
+	display: none;
+	width: 100px;
+	
+	background-color: rgb(20,20,20);
+	
+}
+.menulist li:hover .menuropas {
+	display: block;	
+}
+.menuropas li a {
+	color: rgb(220, 180, 100);
+}
+.menuropas li a:hover {
+	color: yellow;
+}
+/*menu vertical de accesorios*/
+
+.menuaccesorio {
+	
+	z-index: 80;
+	position: absolute;
+	border:1px solid rgb(50,50,50);
+	list-style: none;
+	margin: 5px;
+	margin-top: 30px;
+	padding-left: 20px;
+	
+	display: none;
+	width: 100px;
+	
+	background-color: rgb(20,20,20);
+}
+
+.menulist li:hover .menuaccesorio {
+	display: block;	
+}
+.menuaccesorio li a {
+	color: rgb(220, 180, 100);
+}
+.menuaccesorio li a:hover {
+	color: yellow;
+}
+
+/*menu vertical de bijouteries*/
+.menubijouteries {
+	z-index: 80;
+	position: absolute;
+	border:1px solid rgb(50,50,50);
+	list-style: none;
+	
+	margin-top: 30px;
+	padding-left: 25px;
+	display: none;
+	width: 110px;
+	
+	background-color: rgb(20,20,20);
+}
+
+.menulist li:hover .menubijouteries {
+	display: block;	
+}
+.menubijouteries li a {
+	color: rgb(220, 180, 100);
+}
+.menubijouteries li a:hover {
+	color: yellow;
+}
+/*------------------------------*/
+.list {
+	
+	display: flex;
+	padding: 16px;
+	color: rgb(212, 165, 50);
+	margin: 10px;
+	/*border: 1px solid rgb(05,91,50)*/
+}
+
+.list i {
+	display: flex;
+	box-sizing: border-box; /*aca modifico los iconos*/
+	align-items: center; /*aligns items para centrar verticalmente los iconos en este caso*/
+	/*border: 1px solid red*/
+}
+
+.list a {
+	display: flex;
+	color: rgb(212, 165, 50);
+	text-decoration: none; /*decoracion de las letras del menu*/
+	/*border: 1px solid blue;*/
+	align-items: center;
+
+}
+.list:hover {
+	color: rgb(255, 238, 69); /*con esto cuando pasamos 
+	el mouse, tanto el icono como la letra cambia de color*/
+	
+	
+	
+	
+}
+.list:hover > a { /*color de las letras al pasar el mouse*/
+	color: rgb(255, 238, 69); 
+	
+
+}
+
+.padre-icon-search {
+	display: flex;
+	
+	justify-content: space-between;
+	margin: 0 auto; /*creo que con este me gusta como queda el icono centrado*/
+	width: 450px; /*ancho de la caja contenedora*/
+	/*border: 1px solid orange;*/
+}
+
+.icon {
+	margin-right: 20px;
+	width: 110px;
+	height: 110px;
+	
+	/*border: 1px solid red;*/
+}
+
+.icon img {
+	width: 110px;
+	height: 110px;
+	object-fit: cover;
+	margin-right: 15px;
+	
+	
+	/*border: 1px solid yellow;*/
+}
+
+.padre-search {
+	display: flex; 
+	align-items: center; /*aca centre el input verticalmente dentro de la caja padre*/
+	margin-left: 15px;
+	/*border: 1px solid green*/
+    
+}
+
+.search {
+	width: 130px;
+	height: 40px;
+	font-size: 20px;
+	font-family: Amatic SC;
+	background-color: transparent;
+	color: rgb(212, 165, 50);
+	/*border: 2px inset grey;*/
+
+}
+
+/*--------------MAIN----------------------------------------------------------------*/
+
+.tituloprincipal {
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	font-family: amatic sc;
+	color: rgb(0,0,0);
+	background-color: rgb(212, 165, 50);
+	padding: 10px;
+	position: sticky;
+	/*opacity: 0.9;*/
+	top:0;
+	border-bottom: 5px solid black;
+	
+}
+
+.TP a {
+	text-decoration: none;
+	margin:20px;
+	color: black;
+	font-weight: bold;
+	
+}
+
+.TP a:hover {
+	border-bottom: 1px solid black;
+}
+
+
+/*INICIO---------------------------------------*/
+.friday img{
+	width: 100%;
+	filter: brightness(90%); /*brillo*/
+	border-bottom: 5px solid #ffa;
+
+}
+
+.ofertas {
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+	grid-gap: 10px;
+	height: 200px;
+	border-top: 5px solid #ffa;
+}
+#oferta1 {
+	border:3px solid black;
+	background-image: url(../imagenes/menuinicio/1oferta.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-x: right;
+	background-color: white;
+	font-size: 20px;
+	width: 300px;
+	border-radius: 5%;
+
+}
+#oferta1 h3, h4 {padding: 5px;}
+#oferta1 a {
+	font-family: arial;
+	font-size: 15px;
+	padding: 5px;
+	color: black;
+	text-decoration: none;
+	position: relative;
+	top: 60px;
+	left: 5px;
+	border:1px solid;
+	border-radius: 10%;
+}
+#oferta1 a:hover {
+	background-color: rgb(200,50,50);
+	border:1px solid rgb(200,50,50);
+}
+#oferta1:hover {
+	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
+	position: relative;
+	top:-2px;
+}
+#oferta2 {
+	border:3px solid black;
+	background-image: url(../imagenes/menuinicio/2oferta.png);
+	background-repeat: no-repeat;
+	background-size: 140px;
+	background-position-x: right;
+	background-color: white;
+	font-size: 20px;
+	width: 300px;
+	border-radius: 5%;
+}
+#oferta2 h3, h4 {padding: 5px;}
+#oferta2 a {
+	font-family: arial;
+	font-size: 15px;
+	padding: 5px;
+	color: black;
+	text-decoration: none;
+	position: relative;
+	top: 60px;
+	left: 5px;
+	border:1px solid;
+	border-radius: 10%;
+}
+#oferta2 a:hover {
+	background-color: rgb(200,50,50);
+	border:1px solid rgb(200,50,50);
+}
+#oferta2:hover {
+	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
+	position: relative;
+	top:-2px;
+}
+#oferta3 {
+	border:3px solid black;
+	background-image: url(../imagenes/menuinicio/3oferta.png);
+	background-repeat: no-repeat;
+	background-size: 140px;
+	background-position-x: right;
+	background-color: white;
+	font-size: 20px;
+	width: 300px;
+	border-radius: 5%;
+}
+#oferta3 h3, h4 {padding: 5px;}
+#oferta3 a {
+	font-family: arial;
+	font-size: 15px;
+	padding: 5px;
+	color: black;
+	text-decoration: none;
+	position: relative;
+	top: 60px;
+	left: 5px;
+	border:1px solid;
+	border-radius: 10%;
+}
+#oferta3 a:hover {
+	background-color: rgb(200,50,50);
+	border:1px solid rgb(200,50,50);
+}
+#oferta3:hover {
+	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
+	position: relative;
+	top:-2px;
+}
+
+
+.ofertas2 {
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+	grid-gap: 10px;
+	height: 200px;
+	margin-top: 20px;
+}
+#oferta4 {
+	border:3px solid black;
+	background-image: url(../imagenes/menuinicio/4oferta.png);
+	background-repeat: no-repeat;
+	background-size: 140px;
+	background-position-x: right;
+	background-color: white;
+	font-size: 20px;
+	width: 300px;
+	border-radius: 5%;
+}
+#oferta4 h3, h4 {padding: 5px;}
+#oferta4 a {
+	font-family: arial;
+	font-size: 15px;
+	padding: 5px;
+	color: black;
+	text-decoration: none;
+	position: relative;
+	top: 60px;
+	left: 5px;
+	border:1px solid;
+	border-radius: 10%;
+}
+#oferta4 a:hover {
+	background-color: rgb(200,50,50);
+	border:1px solid rgb(200,50,50);
+}
+#oferta4:hover {
+	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
+	position: relative;
+	top:-2px;
+}
+#oferta5 {
+	border:3px solid black;
+	background-image: url(../imagenes/menuinicio/5oferta.png);
+	background-repeat: no-repeat;
+	background-size: 140px;
+	background-position-x: right;
+	background-color: white;
+	font-size: 20px;
+	width: 300px;
+	border-radius: 5%;
+}
+#oferta5 h3, h4 {padding: 5px;}
+#oferta5 a {
+	font-family: arial;
+	font-size: 15px;
+	padding: 5px;
+	color: black;
+	text-decoration: none;
+	position: relative;
+	top: 60px;
+	left: 5px;
+	border:1px solid;
+	border-radius: 10%;
+}
+#oferta5 a:hover {
+	background-color: rgb(200,50,50);
+	border:1px solid rgb(200,50,50);
+}
+#oferta5:hover {
+	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
+	position: relative;
+	top:-2px;
+}
+#oferta6 {
+	border:3px solid black;
+	background-image: url(../imagenes/menuinicio/6oferta.png);
+	background-repeat: no-repeat;
+	background-size: 125px;
+	background-position-x: right;
+	background-color: white;
+	font-size: 20px;
+	width: 300px;
+	border-radius: 5%;
+}
+#oferta6 h3, h4 {padding: 5px;}
+#oferta6 a {
+	font-family: arial;
+	font-size: 15px;
+	padding: 5px;
+	color: black;
+	text-decoration: none;
+	position: relative;
+	top: 60px;
+	left: 5px;
+	border:1px solid;
+	border-radius: 10%;
+}
+#oferta6 a:hover {
+	background-color: rgb(200,50,50);
+	border:1px solid rgb(200,50,50);
+}
+#oferta6:hover {
+	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
+	position: relative;
+	top:-2px;
+}
+
+
+
+.h1 {
+	
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	
+	width: 100%;
+	letter-spacing:10px;
+	font-family: amatic sc;
+	width: 1500px;
+	padding:20px;
+	margin-top: 10px;
+
+	/*animacion*/
+	animation-name: mover;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-direction: reverse;
+	animation-timing-function: linear;
+
+}
+@keyframes mover {
+	0%{
+		transform: translateX(-100%); 
+	}
+	100%{
+		transform: translateX(100%); 
+	}
+}
+
+
+
+/*INDUMENTARIA----------------------------------------*/
+.publicidadI {
+	font-size: 30px;
+	text-align: center;
+	background-color: black;
+	color:white;
+	border-top: 1px solid grey;
+}
+.ofertaI {
+	display: flex;
+}
+.ofertaI img {
+	width: 34%;
+	height: 500px;
+	object-fit: cover;
+	border:2px solid black;
+}
+
+.indumentaria {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 1fr 1fr 1fr;
+	justify-content: center;
+	grid-gap: 10px;
+	width: 100%;
+	padding: 0px;
+	margin-top: 20px;
+	/*border: 2px solid white;*/
+}
+
+.productoI {
+	width: 100%;
+	color: white;
+	padding-top: 20px;
+	text-align: center;
+	/*border: 1px solid red;*/
+	justify-self: center;
+}
+
+.productoI img {
+	width: 75%;
+
+	border:2px solid black;
+
+}
+
+.productoI:nth-child(1) {
+	grid-column: 1 / 4;	
+}
+.productoI:nth-child(2) {
+	grid-column: 4 / 7;
+}
+.productoI:nth-child(3) {
+	grid-column: 7 / 10;
+}
+.productoI:nth-child(4) {
+	grid-column: 10 / 13;
+}
+.productoI:nth-child(5) {
+	grid-column: 1 / 4;
+}
+.productoI:nth-child(6) {
+	grid-column: 4 / 7;
+}
+.productoI:nth-child(7) {
+	grid-column: 7 / 10;
+}
+.productoI:nth-child(8) {
+	grid-column: 10 / 13;
+}
+.productoI:nth-child(9) {
+	grid-column: 1 / 4;
+}
+.productoI:nth-child(10) {
+	grid-column: 4 / 7;
+}
+.productoI:nth-child(11) {
+	grid-column: 7 / 10;
+}
+.productoI:nth-child(12) {
+	grid-column: 10 / 13;
+}
+/*----------ACCESORIOS----------------------------------------*/
+.accesorios {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 1fr 1fr 1fr;
+	justify-content: center;
+	grid-gap: 10px;
+	width: 100%;
+	padding: 0px;
+	margin-top: 20px;
+	/*border: 2px solid white;*/
+}
+
+.productoA {
+	width: 100%;
+	color: white;
+	padding-top: 20px;
+	text-align: center;
+	/*border: 1px solid red;*/
+	justify-self: center;
+}
+
+.productoA img {
+	width: 75%;
+
+	border:2px solid black;
+
+}
+
+.productoA:nth-child(1) {
+	grid-column: 1 / 4;	
+}
+.productoA:nth-child(2) {
+	grid-column: 4 / 7;
+}
+.productoA:nth-child(3) {
+	grid-column: 7 / 10;
+}
+.productoA:nth-child(4) {
+	grid-column: 10 / 13;
+}
+.productoA:nth-child(5) {
+	grid-column: 1 / 4;
+}
+.productoA:nth-child(6) {
+	grid-column: 4 / 7;
+}
+.productoA:nth-child(7) {
+	grid-column: 7 / 10;
+}
+.productoA:nth-child(8) {
+	grid-column: 10 / 13;
+}
+.productoA:nth-child(9) {
+	grid-column: 1 / 4;
+}
+.productoA:nth-child(10) {
+	grid-column: 4 / 7;
+}
+.productoA:nth-child(11) {
+	grid-column: 7 / 10;
+}
+.productoA:nth-child(12) {
+	grid-column: 10 / 13;
+}
+
+/*----------BIJOUTERIE----------------------------------------*/
+
+.bijouteries {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 1fr 1fr 1fr;
+	justify-content: center;
+	grid-gap: 10px;
+	width: 100%;
+	padding: 0px;
+	margin-top: 20px;
+	/*border: 2px solid white;*/
+}
+
+.productoB {
+	width: 100%;
+	color: white;
+	padding-top: 20px;
+	text-align: center;
+	/*border: 1px solid red;*/
+	justify-self: center;
+}
+
+.productoB img {
+	width: 75%;
+
+	border:2px solid black;
+
+}
+
+.productoB:nth-child(1) {
+	grid-column: 1 / 4;	
+}
+.productoB:nth-child(2) {
+	grid-column: 4 / 7;
+}
+.productoB:nth-child(3) {
+	grid-column: 7 / 10;
+}
+.productoB:nth-child(4) {
+	grid-column: 10 / 13;
+}
+.productoB:nth-child(5) {
+	grid-column: 1 / 4;
+}
+.productoB:nth-child(6) {
+	grid-column: 4 / 7;
+}
+.productoB:nth-child(7) {
+	grid-column: 7 / 10;
+}
+.productoB:nth-child(8) {
+	grid-column: 10 / 13;
+}
+.productoB:nth-child(9) {
+	grid-column: 1 / 4;
+}
+.productoB:nth-child(10) {
+	grid-column: 4 / 7;
+}
+.productoB:nth-child(11) {
+	grid-column: 7 / 10;
+}
+.productoB:nth-child(12) {
+	grid-column: 10 / 13;
+}
+/*------------PERFUMES------------------------------------------------------*/
+
+.perfumes {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 1fr 1fr 1fr;
+	justify-content: center;
+	grid-gap: 10px;
+	width: 100%;
+	padding: 0px;
+	margin-top: 20px;
+	/*border: 2px solid white;*/
+}
+
+.productoP {
+	width: 100%;
+	color: white;
+	padding-top: 20px;
+	text-align: center;
+	/*border: 1px solid red;*/
+	justify-self: center;
+}
+
+.productoP img {
+	width: 75%;
+
+	border:2px solid black;
+
+}
+
+.productoP:nth-child(1) {
+	grid-column: 1 / 4;	
+}
+.productoP:nth-child(2) {
+	grid-column: 4 / 7;
+}
+.productoP:nth-child(3) {
+	grid-column: 7 / 10;
+}
+.productoP:nth-child(4) {
+	grid-column: 10 / 13;
+}
+.productoP:nth-child(5) {
+	grid-column: 1 / 4;
+}
+.productoP:nth-child(6) {
+	grid-column: 4 / 7;
+}
+.productoP:nth-child(7) {
+	grid-column: 7 / 10;
+}
+.productoP:nth-child(8) {
+	grid-column: 10 / 13;
+}
+.productoP:nth-child(9) {
+	grid-column: 1 / 4;
+}
+.productoP:nth-child(10) {
+	grid-column: 4 / 7;
+}
+.productoP:nth-child(11) {
+	grid-column: 7 / 10;
+}
+.productoP:nth-child(12) {
+	grid-column: 10 / 13;
+}
+
+/*------------CONTACTO------------------------------------------------------*/
+.fondocontacto {
+	background-image: url(../imagenes/fondo.jpg);
+	
+	display: flex;
+	background-size: cover; /*me gusta mas sin esto*/
+	border: 1px solid;
+	
+}
+
+.formulario {
+	
+	text-align: center;
+	
+	padding: 10px;
+	width: 100%;
+	height: 400px;
+	font-size: 20px;
+	font-family: serif, sans-serif;
+	border: 50px ridge grey;
+	box-shadow: 5px 10px;
+}
+
+.fieldset {
+
+	color: white;
+	width: 50%;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	padding: 30px;
+	margin: auto;
+	border: 20px ridge grey;
+	
+}
+
+.label {
+	display:block;
+	color: white;
+	/*border: 1px solid red;*/
+}
+
+.textareayboton {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+}
+
+#textarea {
+	resize: none;
+	text-align: left;
+	width: 200px;
+	height: 90px;
+}
+
+.consultar { /*el boton de enviar*/
+	margin-top: 10px;
+	width: 100px;
+	align-self: center;
+}
+.volverainicio a {
+	font-size: 20px;
+	color:white;
+	text-decoration: none;	
+}
+
+/*------------FOOTER-------------------------------------------------------------------*/
+.pie {
+	display: grid;
+	justify-content: center;
+	background-color: rgb(0,0,04);
+	border-top: 2px solid rgb(80,80,80);
+	color: rgb(50,50,80); /*color de las letras del pie de pag*/
+	/*border:5px solid white;*/
+}
+
+.grupo1 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 250px;
+	/*border: 1px solid red;*/
+}
+
+.logotipo {
+	
+	
+	width: 100%;
+	height: 100%;
+	
+	/*border: 1px solid blue;*/
+
+}
+
+.grupo1 .logotipo figure img {
+	margin: 15px;
+
+	width: 300px;
+	/*border: 1px solid green;*/
+}
+
+.nosotros {
+	align-self: center; /*centrado verticalmente cuando es el contenedor padre*/
+	text-align: center;
+	min-width: 135px;
+	/*border: 1px solid violet;*/
+}
+
+.nosotros h2 {
+	color: rgb(230,230,230);
+	margin-bottom: 25px;
+	font-size: 30px;
+	font-family: Amatic SC;
+	/*border: 1px solid grey;*/
+}
+
+.nosotros p {
+	color: rgb(230,230,230);
+	margin-bottom: 10px;
+	font-family: Amatic SC;
+	/*border: 1px solid red;*/
+}
+
+.redesociales {
+	
+	font-size: 25px;
+	font-family: Amatic SC;
+	margin: 10px;
+	text-align: center;
+	align-self: center;
+	color: rgb(230,230,230);
+	/*border: 1px solid yellow;*/
+}
+
+.redesocialeshijo {
+	display: grid;
+	grid-template-columns: repeat(4, 70px);
+
+	margin: 20px;
+	/*border: 1px solid red;*/
+	padding:10px;
+}
+
+.redesocialeshijo a {
+	display: grid;
+	align-items: center; /*centra verticalmente cuando es el hijo*/
+	text-decoration: none;
+	width: 45px;
+	height: 45px;
+	margin:12px;
+	color: white;
+	background-color: rgb(20,20,50);
+	
+	/*border: 1px solid rgb(200,200,200);*/
+}
+
+
+
+.pie .grupo2 {
+	
+	background-color: transparent;
+	padding: 15px;
+	text-align: center; /*nose xq no lo centra*/
+	color: rgb(230,230,230);
+	/*border: 1px solid blue;*/
+}
+/*--------------RESPONSIVE----------------------------------------------*/
+/*--------------RESPONSIVE----------------------------------------------*/
+/*--------------RESPONSIVE----------------------------------------------*/
+
+@media (max-width: 768px) { /*VISTA-TABLET*/
+/*-----------MENU-RESPONSIVE---------------------*/
+* {
+ 	box-sizing: border-box;
+ 	margin:0; 
+ 	padding: 0;
+ }
+ body {
+ 	border:0px solid;
+}
+
+
+.menulist li:hover .menuaccesorio {
+	display: none;	
+}
+
+.menulist li:hover .menuropas {
+	display: none;	
+}
+
+.menulist li:hover .menubijouteries {
+	display: none;	
+}
+.list:hover {
+	border:none;
+}
+
+#check:checked + .menulist {
+	display: block;
+
+}
+
+.menu {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 120px 70px; /*estuve como 2 horas viendo cual era el problema de xq cuando el menu estaba cerrado me ocupaba lugar y la solucion era ponerle solo 2 filas en vez de 3*/
+	max-width: 100%;
+	height: 100%;
+	/*border:1px solid green;*/
+
+
+}
+
+.padre-icon-search {
+	grid-row: 1 / 2;
+	width: 100%; /*ancho de la caja contenedora*/
+	/*border: 1px solid orange;*/
+}
+
+.menu a {
+	display: block;
+	text-align: center;
+	/*border: 1px solid orange;*/
+}
+.menu .menulist > li {
+	display: inline;
+}
+
+.checkbtn {
+	display: inline;
+	grid-row: 2 / 3;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	margin: 15px; 
+	cursor: pointer;
+}
+
+.menulist {
+	display: none;
+	font-size: 30px;
+}
+.menulist i{
+	display: none; /*saque los iconos*/
+}
+
+
+/*----------INICIO----------------------------*/
+.ofertas {
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+	grid-gap: 10px;
+	height: 200px;
+	border-top: 5px solid #ffa;
+}
+#oferta1 {
+	background-position-y:center;
+	background-size: 90px;
+	font-size: 15px;
+}
+
+#oferta1 a {
+	font-size: 12px;
+	top: 85px;
+}
+
+#oferta2 {
+	background-size: 100px;
+	background-position-y:center;
+	font-size: 15px;
+}
+
+#oferta2 a {
+	font-size: 12px;
+	top: 85px;
+}
+
+#oferta3 {
+	background-size: 100px;
+	background-position-y:center;
+	font-size: 15px;
+}
+
+#oferta3 a {
+	font-size: 12px;
+	top: 85px;
+	left: 5px;
+}
+
+#oferta4 {
+	background-size: 100px;
+	background-position-y:center;
+	font-size: 15px;
+}
+
+#oferta4 a {
+	font-size: 12px;
+	top: 85px;
+}
+
+#oferta5 {
+	background-size: 100px;
+	background-position-y:center;
+	font-size: 15px;
+}
+
+#oferta5 a {
+	font-size: 12px;
+	top: 85px;
+}
+
+#oferta6 {
+	background-size: 100px;
+	background-position-y: center;
+	font-size: 15px;
+}
+
+#oferta6 a {
+	font-size: 12px;
+	top: 85px;
+}
+
+
+/*----------INDUMENTARIA----------------------------*/
+
+.publicidadI {
+	font-size: 20px;
+	text-align: center;
+	background-color: black;
+	color:white;
+	border-top: 1px solid grey;
+
+}
+.ofertaI {
+	display: flex;
+}
+.ofertaI img {
+	width: 33.3%;
+	height: 350px;
+	object-fit: cover;
+	border:2px solid black;
+}
+
+.indumentaria {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	
+	grid-gap: 20px;
+	width: 100%;
+}
+
+.productoI {
+	width: 100%;
+	margin: 5px auto;
+
+	color: white;
+	padding-top: 20px;
+	text-align: center;
+	/*border: 1px solid red;*/
+	justify-self: center;
+}
+.productoI img {
+	width: 100%;
+
+	border:2px solid black;
+}
+.productoI:nth-child(1) {
+	grid-column: 2 / 4;	
+	grid-row: 1 / 2;
+}
+.productoI:nth-child(2) {
+	grid-column: 4 / 6;
+	grid-row: 1 / 2;
+}
+.productoI:nth-child(3) {
+	grid-column: 6 / 8;
+	grid-row: 1 / 2;
+}
+.productoI:nth-child(4) {
+	grid-column: 2 / 4;
+	grid-row: 2 / 3;
+}
+.productoI:nth-child(5) {
+	grid-column: 4 / 6;
+	grid-row: 2 / 3;
+}
+.productoI:nth-child(6) {
+	grid-column: 6 / 8;
+	grid-row: 2 / 3;
+}
+.productoI:nth-child(7) {
+	grid-column: 2 / 4;
+	grid-row: 3 / 4;
+}
+.productoI:nth-child(8) {
+	grid-column: 4 / 6;
+	grid-row: 3 / 4;
+}
+.productoI:nth-child(9) {
+	grid-column: 6 / 8;
+	grid-row: 3 / 4;
+}
+.productoI:nth-child(10) {
+	grid-column: 2 / 4;
+	grid-row: 4 / 5
+}
+.productoI:nth-child(11) {
+	grid-column: 4 / 6;
+	grid-row: 4 / 5
+}
+.productoI:nth-child(12) {
+	grid-column: 6 / 8;
+	grid-row: 4 / 5
+}
+
+
+
+
+
+/*----------ACCESORIOS----------------------------*/
+
+
+/*----------BIJOUTERIE----------------------------*/
+
+
+/*----------PERFUMES----------------------------*/
+
+
+/*----------FOOTER----------------------------*/
+
+.grupo1 {
+	grid-template-columns: 1fr;
+	grid-template-rows: 200px;
+}
+.logotipo {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/*border: 1px solid blue;*/
+}
+.grupo1 .logotipo figure img {
+	margin: 15px;
+	width: 240px;
+}
+.nosotros {
+	width: 100%;	
+}
+.nosotros h2 {
+	font-size: 25px;
+}
+
+
+
+}
+
+@media (max-width: 480px) { /*VISTA-MOBILE*/
+ * {
+ 	box-sizing: border-box;
+ 	margin:0; 
+ 	padding: 0;
+ }
+ body {
+ 	border:0px solid;
+ }
+/*-----------MENU-RESPONSIVE-MOBILE-----------------*/
+.menulist li:hover .menuaccesorio {
+	display: none;	
+}
+
+.menulist li:hover .menuropas {
+	display: none;	
+}
+
+.menulist li:hover .menubijouteries {
+	display: none;	
+}
+.list:hover {
+	border:none; /*saltaba un error con esto*/
+}
+
+#check:checked + .menulist {
+	display: block;
+
+}
+
+.menu {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 120px 70px; /*estuve como 2 horas viendo cual era el problema de xq cuando el menu estaba cerrado me ocupaba lugar y la solucion era ponerle solo 2 filas en vez de 3*/
+	max-width: 100%;
+	height: 100%;
+	/*border:1px solid green;*/
+
+
+}
+
+.padre-icon-search {
+	grid-row: 1 / 2;
+	width: 100%; /*ancho de la caja contenedora*/
+	/*border: 1px solid orange;*/
+}
+
+.menu a {
+	display: block;
+	text-align: center;
+	/*border: 1px solid orange;*/
+}
+.menu .menulist > li {
+	display: inline;
+}
+
+.checkbtn {
+	display: inline;
+	grid-row: 2 / 3;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	margin: 15px; 
+	cursor: pointer;
+
+	
+
+	/*border:1px solid red;*/
+}
+
+.menulist {
+	display: none;
+	/*grid-row: 3 / 4;*/ /*funciona igual sin esto*/
+	
+	height: 320px;
+	text-align: center;
+	font-size: 25px;
+	/*border:1px solid white;*/
+}
+.menulist li {
+	border:none;
+
+}
+
+.menulist i{
+	display: none; /*saque los iconos*/
+}
+/*-MAIN-RESPONSIVE-MOBILE---------*/
+.tituloprincipal {
+	display: block;
+	text-align: center;
+	font-size: 15px;	
+	width: 100%;
+}
+
+
+/*----------INICIO----------------------------*/
+.h1 {
+	font-size: 12px;
+	animation-duration: 10s;
+}
+
+.ofertas {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items:center;
+	grid-gap: 10px;
+	
+	border-top: 5px solid #ffa;
+	
+	height: 100%;
+	width:100%;
+}
+.ofertas2 {
+	align-items:center;
+	width:100%;
+	height: 100%;
+	flex-direction: column;
+	
+}
+#oferta1 {
+	background-position-y:center;
+	background-size: 90px;
+	font-size: 15px;
+	width:100%;
+}
+
+#oferta1 a {
+	font-size: 12px;
+	top: -5px;
+	left: 0px;
+}
+
+#oferta2 {
+	background-size: 100px;
+	background-position-y:center;
+	font-size: 15px;
+	width:100%;
+}
+
+#oferta2 a {
+	font-size: 12px;
+	top: -5px;
+	left: 0px;
+}
+
+#oferta3 {
+	background-size: 100px;
+	background-position-y:center;
+	font-size: 15px;
+	width:100%;
+}
+
+#oferta3 a {
+	font-size: 12px;
+	top: -5px;
+	left: 0px;
+}
+
+#oferta4 {
+	background-size: 100px;
+	background-position-y:center;
+	font-size: 15px;
+	width:100%;
+}
+
+#oferta4 a {
+	font-size: 12px;
+	top: -5px;
+	left: 0px;
+}
+
+#oferta5 {
+	background-size: 100px;
+	background-position-y:center;
+	font-size: 15px;
+	width:100%;
+}
+
+#oferta5 a {
+	font-size: 12px;
+	top: -5px;
+	left: 0px;
+}
+
+#oferta6 {
+	background-size: 100px;
+	background-position-y: center;
+	font-size: 15px;
+	width:100%;
+}
+
+#oferta6 a {
+	font-size: 12px;
+	top: -5px;
+	left: 0px;
+}
+
+
+/*----------INDUMENTARIA----------------------------*/
+
+.publicidadI {
+	font-size: 15px;
+	text-align: center;
+	background-color: black;
+	color:white;
+	border-top: 1px solid grey;
+
+}
+.ofertaI {
+	display: flex;
+}
+.ofertaI img {
+	width: 33.3%;
+	height: 300px;
+	object-fit: cover;
+	border:2px solid black;
+}
+
+.indumentaria {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	
+	grid-gap: 10px;
+	width: 100%;
+}
+
+.productoI {
+	width: 100%;
+	margin: 5px auto;
+
+	color: white;
+	padding-top: 20px;
+	text-align: center;
+	/*border: 1px solid red;*/
+	justify-self: center;
+}
+.productoI img {
+	width: 100%;
+
+	border:2px solid black;
+}
+.productoI:nth-child(1) {
+	grid-column: 2 / 5;	
+	grid-row: 1 / 2;
+}
+.productoI:nth-child(2) {
+	grid-column: 5 / 8;
+	grid-row: 1 / 2;
+}
+.productoI:nth-child(3) {
+	grid-column: 2 / 5;
+	grid-row: 2 / 3;
+}
+.productoI:nth-child(4) {
+	grid-column: 5 / 8;
+	grid-row: 2 / 3;
+}
+.productoI:nth-child(5) {
+	grid-column: 2 / 5;
+	grid-row: 3 / 4;
+}
+.productoI:nth-child(6) {
+	grid-column: 5 / 8;
+	grid-row: 3 / 4;
+}
+.productoI:nth-child(7) {
+	grid-column: 2 / 5;
+	grid-row: 4 / 5;
+}
+.productoI:nth-child(8) {
+	grid-column: 5 / 8;
+	grid-row: 4 / 5;
+}
+.productoI:nth-child(9) {
+	grid-column: 2 / 5;
+	grid-row: 5 / 6;
+}
+.productoI:nth-child(10) {
+	grid-column: 5 / 8;
+	grid-row: 5 / 6;
+}
+.productoI:nth-child(11) {
+	grid-column: 2 / 5;
+	grid-row: 6 / 7
+}
+.productoI:nth-child(12) {
+	grid-column: 5 / 8;
+	grid-row: 6 / 7
+}
+
+/*----------ACCESORIOS----------------------------*/
+
+
+
+/*----------BEJUTERIE----------------------------*/
+
+
+
+/*----------PERFUMES----------------------------*/
+
+
+
+/*----------FOOTER----------------------------*/
+
+.grupo1 {
+	grid-template-columns: 1fr;
+	grid-template-rows: 200px;
+}
+.logotipo {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/*border: 1px solid blue;*/
+}
+.grupo1 .logotipo figure img {
+	margin: 15px;
+	width: 240px;
+}
+.nosotros {
+	width: 100%;	
+}
+.nosotros h2 {
+	font-size: 25px;
+}
+
+
+
+
+
+
+
+}
