@@ -5,14 +5,12 @@
 }
 
 body {
-	border: px solid black; /*le tuve que poner esto xq sino la imagen de fondo quedaba mal, total ni se nota*/
-	opacity: 0.9; /*convinado con el blur la imagen de fondo se ve una joyita, PERO las imagenes se ven un poquitin transparente, espeor que no moleste mas adelante*/
+	border: px solid black; 
+	opacity: 0.9; 
 	background-image: url(../imagenes/fondo.jpg);
 	backdrop-filter: blur(100px); /*opacidad*/
 	background-position: top;
-	/*background-attachment: fixed;*/ /*mas copado sin que quede fijo*/
-	/*background-size: contain;*/ /*me gusta mas sin esto*/
-	overflow-x: hidden; /*scroll horizontal*/
+	overflow-x: hidden; 
 	
 }
 
@@ -34,9 +32,8 @@ body {
 	display: flex;
 	background-color: transparent; /*color etc del fondo del header seria*/
 	padding: 10px;
-	flex-direction:row-reverse; /*aca inverti la posicion que tenian los elementos dentro de la caja azul (que seria todo el menu)*/
-	justify-content: center; /*al final le puse center xq le puse un margin right a padreinput aca con betwen al ser la caja contenedora y tener adentro 2 cajas contenedoras mas, 
-									las separo, a una la puso hacia la izquierda y la otra hacia la derecha*/
+	flex-direction:row-reverse; 
+	justify-content: center; 
 	flex-wrap: wrap-reverse;
 	background-color: black;
 	
@@ -158,14 +155,13 @@ body {
 
 }
 .list:hover {
-	color: rgb(255, 238, 69); /*con esto cuando pasamos 
-	el mouse, tanto el icono como la letra cambia de color*/
+	color: rgb(255, 238, 69); 
 	
 	
 	
 	
 }
-.list:hover > a { /*color de las letras al pasar el mouse*/
+.list:hover > a { 
 	color: rgb(255, 238, 69); 
 	
 
@@ -175,8 +171,8 @@ body {
 	display: flex;
 	
 	justify-content: space-between;
-	margin: 0 auto; /*creo que con este me gusta como queda el icono centrado*/
-	width: 450px; /*ancho de la caja contenedora*/
+	margin: 0 auto; 
+	width: 450px; 
 	/*border: 1px solid orange;*/
 }
 
@@ -256,22 +252,24 @@ body {
 }
 
 .ofertas {
-	display: flex;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); ;
+	grid-template-rows: 200px 200px;
 	padding: 10px;
 	grid-gap: 10px;
-	height: 200px;
+	height: 100%;
+	width: 100%;
 	border-top: 5px solid #ffa;
 }
 #oferta1 {
 	border:3px solid black;
 	background-image: url(../imagenes/menuinicio/1oferta.png);
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 130px;
 	background-position-x: right;
 	background-color: white;
 	font-size: 20px;
-	width: 300px;
+	width: 100%;
 	border-radius: 5%;
 
 }
@@ -283,8 +281,8 @@ body {
 	color: black;
 	text-decoration: none;
 	position: relative;
-	top: 60px;
-	left: 5px;
+	top: 85px;
+	left: 10px;
 	border:1px solid;
 	border-radius: 10%;
 }
@@ -296,183 +294,38 @@ body {
 	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
 	position: relative;
 	top:-2px;
+	cursor: pointer;
 }
-#oferta2 {
-	border:3px solid black;
+#oferta1:nth-child(1) {
+	background-image: url(../imagenes/menuinicio/1oferta.png);
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+#oferta1:nth-child(2) {
 	background-image: url(../imagenes/menuinicio/2oferta.png);
-	background-repeat: no-repeat;
-	background-size: 140px;
-	background-position-x: right;
-	background-color: white;
-	font-size: 20px;
-	width: 300px;
-	border-radius: 5%;
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
 }
-#oferta2 h3, h4 {padding: 5px;}
-#oferta2 a {
-	font-family: arial;
-	font-size: 15px;
-	padding: 5px;
-	color: black;
-	text-decoration: none;
-	position: relative;
-	top: 60px;
-	left: 5px;
-	border:1px solid;
-	border-radius: 10%;
-}
-#oferta2 a:hover {
-	background-color: rgb(200,50,50);
-	border:1px solid rgb(200,50,50);
-}
-#oferta2:hover {
-	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
-	position: relative;
-	top:-2px;
-}
-#oferta3 {
-	border:3px solid black;
+#oferta1:nth-child(3) {
 	background-image: url(../imagenes/menuinicio/3oferta.png);
-	background-repeat: no-repeat;
-	background-size: 140px;
-	background-position-x: right;
-	background-color: white;
-	font-size: 20px;
-	width: 300px;
-	border-radius: 5%;
+	grid-column: 3 / 4;
+	grid-row: 1 / 2;
 }
-#oferta3 h3, h4 {padding: 5px;}
-#oferta3 a {
-	font-family: arial;
-	font-size: 15px;
-	padding: 5px;
-	color: black;
-	text-decoration: none;
-	position: relative;
-	top: 60px;
-	left: 5px;
-	border:1px solid;
-	border-radius: 10%;
-}
-#oferta3 a:hover {
-	background-color: rgb(200,50,50);
-	border:1px solid rgb(200,50,50);
-}
-#oferta3:hover {
-	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
-	position: relative;
-	top:-2px;
-}
-
-
-.ofertas2 {
-	display: flex;
-	justify-content: space-around;
-	padding: 10px;
-	grid-gap: 10px;
-	height: 200px;
-	margin-top: 20px;
-}
-#oferta4 {
-	border:3px solid black;
+#oferta1:nth-child(4) {
 	background-image: url(../imagenes/menuinicio/4oferta.png);
-	background-repeat: no-repeat;
-	background-size: 140px;
-	background-position-x: right;
-	background-color: white;
-	font-size: 20px;
-	width: 300px;
-	border-radius: 5%;
+	grid-column: 4 / 5;
+	grid-row: 1 / 2;
 }
-#oferta4 h3, h4 {padding: 5px;}
-#oferta4 a {
-	font-family: arial;
-	font-size: 15px;
-	padding: 5px;
-	color: black;
-	text-decoration: none;
-	position: relative;
-	top: 60px;
-	left: 5px;
-	border:1px solid;
-	border-radius: 10%;
-}
-#oferta4 a:hover {
-	background-color: rgb(200,50,50);
-	border:1px solid rgb(200,50,50);
-}
-#oferta4:hover {
-	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
-	position: relative;
-	top:-2px;
-}
-#oferta5 {
-	border:3px solid black;
+#oferta1:nth-child(5) {
 	background-image: url(../imagenes/menuinicio/5oferta.png);
-	background-repeat: no-repeat;
-	background-size: 140px;
-	background-position-x: right;
-	background-color: white;
-	font-size: 20px;
-	width: 300px;
-	border-radius: 5%;
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
 }
-#oferta5 h3, h4 {padding: 5px;}
-#oferta5 a {
-	font-family: arial;
-	font-size: 15px;
-	padding: 5px;
-	color: black;
-	text-decoration: none;
-	position: relative;
-	top: 60px;
-	left: 5px;
-	border:1px solid;
-	border-radius: 10%;
-}
-#oferta5 a:hover {
-	background-color: rgb(200,50,50);
-	border:1px solid rgb(200,50,50);
-}
-#oferta5:hover {
-	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
-	position: relative;
-	top:-2px;
-}
-#oferta6 {
-	border:3px solid black;
+#oferta1:nth-child(6) {
 	background-image: url(../imagenes/menuinicio/6oferta.png);
-	background-repeat: no-repeat;
-	background-size: 125px;
-	background-position-x: right;
-	background-color: white;
-	font-size: 20px;
-	width: 300px;
-	border-radius: 5%;
+	grid-column: 3 / 4;
+	grid-row: 2 / 3;
 }
-#oferta6 h3, h4 {padding: 5px;}
-#oferta6 a {
-	font-family: arial;
-	font-size: 15px;
-	padding: 5px;
-	color: black;
-	text-decoration: none;
-	position: relative;
-	top: 60px;
-	left: 5px;
-	border:1px solid;
-	border-radius: 10%;
-}
-#oferta6 a:hover {
-	background-color: rgb(200,50,50);
-	border:1px solid rgb(200,50,50);
-}
-#oferta6:hover {
-	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
-	position: relative;
-	top:-2px;
-}
-
 
 
 .h1 {
@@ -501,7 +354,7 @@ body {
 		transform: translateX(-100%); 
 	}
 	100%{
-		transform: translateX(100%); 
+		transform: translateX(80%); 
 	}
 }
 
@@ -540,17 +393,33 @@ body {
 .productoI {
 	width: 100%;
 	color: white;
+	font-family: Amatic sc;
 	padding-top: 20px;
 	text-align: center;
-	/*border: 1px solid red;*/
+	
 	justify-self: center;
+	font-size: 30px;
+	overflow:hidden;
+
+}
+.productoI h4, h5{
+	border-bottom:1px solid white;
+	width: 80%;
+	margin:auto;
 }
 
 .productoI img {
 	width: 75%;
+	
+	border:5px solid black;
 
-	border:2px solid black;
+}
 
+.productoI img:hover {
+	cursor: pointer;
+	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
+	position: relative;
+	top:-2px;
 }
 
 .productoI:nth-child(1) {
@@ -793,7 +662,7 @@ body {
 	background-image: url(../imagenes/fondo.jpg);
 	
 	display: flex;
-	background-size: cover; /*me gusta mas sin esto*/
+	background-size: cover;
 	border: 1px solid;
 	
 }
@@ -864,7 +733,7 @@ body {
 	justify-content: center;
 	background-color: rgb(0,0,04);
 	border-top: 2px solid rgb(80,80,80);
-	color: rgb(50,50,80); /*color de las letras del pie de pag*/
+	color: rgb(50,50,80); 
 	/*border:5px solid white;*/
 }
 
@@ -996,7 +865,7 @@ body {
 .menu {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 120px 70px; /*estuve como 2 horas viendo cual era el problema de xq cuando el menu estaba cerrado me ocupaba lugar y la solucion era ponerle solo 2 filas en vez de 3*/
+	grid-template-rows: 120px 70px; 
 	max-width: 100%;
 	height: 100%;
 	/*border:1px solid green;*/
@@ -1039,79 +908,76 @@ body {
 
 
 /*----------INICIO----------------------------*/
-.ofertas {
-	display: flex;
-	justify-content: space-around;
-	padding: 10px;
-	grid-gap: 10px;
-	height: 200px;
-	border-top: 5px solid #ffa;
+.h1 {
+	font-size: 12px;
+	animation-duration: 12s;
 }
+@keyframes mover {
+	0%{
+		transform: translateX(-80%); 
+	}
+	100%{
+		transform: translateX(40%); 
+	}
+}
+
+.ofertas {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 200px);
+	
+	align-items:center;
+	grid-gap: 10px;
+	
+	border-top: 5px solid #ffa;
+	
+	height: 100%;
+	width:100%;
+}
+
 #oferta1 {
 	background-position-y:center;
-	background-size: 90px;
+	background-size: 110px;
 	font-size: 15px;
+	width:100%;
+	height: 100%;
 }
 
 #oferta1 a {
 	font-size: 12px;
-	top: 85px;
-}
-
-#oferta2 {
-	background-size: 100px;
-	background-position-y:center;
-	font-size: 15px;
-}
-
-#oferta2 a {
-	font-size: 12px;
-	top: 85px;
-}
-
-#oferta3 {
-	background-size: 100px;
-	background-position-y:center;
-	font-size: 15px;
-}
-
-#oferta3 a {
-	font-size: 12px;
-	top: 85px;
+	top: 100px;
 	left: 5px;
 }
 
-#oferta4 {
-	background-size: 100px;
-	background-position-y:center;
-	font-size: 15px;
+#oferta1:nth-child(1) {
+	background-image: url(../imagenes/menuinicio/1oferta.png);
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
 }
-
-#oferta4 a {
-	font-size: 12px;
-	top: 85px;
+#oferta1:nth-child(2) {
+	background-image: url(../imagenes/menuinicio/2oferta.png);
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
 }
-
-#oferta5 {
-	background-size: 100px;
-	background-position-y:center;
-	font-size: 15px;
+#oferta1:nth-child(3) {
+	background-image: url(../imagenes/menuinicio/3oferta.png);
+	grid-column: 3 / 4;
+	grid-row: 1 / 2;
 }
-
-#oferta5 a {
-	font-size: 12px;
-	top: 85px;
+#oferta1:nth-child(4) {
+	background-image: url(../imagenes/menuinicio/4oferta.png);
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
 }
-
-#oferta6 {
-	background-size: 100px;
-	background-position-y: center;
-	font-size: 15px;
+#oferta1:nth-child(5) {
+	background-image: url(../imagenes/menuinicio/5oferta.png);
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
 }
-
-#oferta6 a {
-	font-size: 12px;
-	top: 85px;
+#oferta1:nth-child(6) {
+	background-image: url(../imagenes/menuinicio/6oferta.png);
+	grid-column: 3 / 4;
+	grid-row: 2 / 3;
 }
 
 
@@ -1137,75 +1003,59 @@ body {
 
 .indumentaria {
 	display: grid;
-	grid-template-columns: repeat(8, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(4, 1fr);
-	
-	grid-gap: 20px;
-	width: 100%;
-}
-
-.productoI {
-	width: 100%;
-	margin: 5px auto;
-
-	color: white;
-	padding-top: 20px;
-	text-align: center;
-	/*border: 1px solid red;*/
-	justify-self: center;
 }
 .productoI img {
-	width: 100%;
-
-	border:2px solid black;
+	width: 90%;
 }
 .productoI:nth-child(1) {
-	grid-column: 2 / 4;	
+	grid-column: 1 / 2;	
 	grid-row: 1 / 2;
 }
 .productoI:nth-child(2) {
-	grid-column: 4 / 6;
+	grid-column: 2 / 3;
 	grid-row: 1 / 2;
 }
 .productoI:nth-child(3) {
-	grid-column: 6 / 8;
+	grid-column: 3 / 4;
 	grid-row: 1 / 2;
 }
 .productoI:nth-child(4) {
-	grid-column: 2 / 4;
+	grid-column: 1 / 2;
 	grid-row: 2 / 3;
 }
 .productoI:nth-child(5) {
-	grid-column: 4 / 6;
+	grid-column: 2 / 3;
 	grid-row: 2 / 3;
 }
 .productoI:nth-child(6) {
-	grid-column: 6 / 8;
+	grid-column: 3 / 4;
 	grid-row: 2 / 3;
 }
 .productoI:nth-child(7) {
-	grid-column: 2 / 4;
+	grid-column: 1 / 2;
 	grid-row: 3 / 4;
 }
 .productoI:nth-child(8) {
-	grid-column: 4 / 6;
+	grid-column: 2 / 3;
 	grid-row: 3 / 4;
 }
 .productoI:nth-child(9) {
-	grid-column: 6 / 8;
+	grid-column: 3 / 4;
 	grid-row: 3 / 4;
 }
 .productoI:nth-child(10) {
-	grid-column: 2 / 4;
-	grid-row: 4 / 5
+	grid-column: 1 / 2;
+	grid-row: 4 / 5;
 }
 .productoI:nth-child(11) {
-	grid-column: 4 / 6;
-	grid-row: 4 / 5
+	grid-column: 2 / 3;
+	grid-row: 4 / 5;
 }
 .productoI:nth-child(12) {
-	grid-column: 6 / 8;
-	grid-row: 4 / 5
+	grid-column: 3 / 4;
+	grid-row: 4 / 5;
 }
 
 
@@ -1213,6 +1063,60 @@ body {
 
 
 /*----------ACCESORIOS----------------------------*/
+.accesorios {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 300px);
+}
+.productoA:nth-child(1) {
+	grid-column: 1 / 2;	
+	grid-row: 1 / 2;
+}
+.productoA:nth-child(2) {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+.productoA:nth-child(3) {
+	grid-column: 3 / 4;
+	grid-row: 1 / 2;
+}
+.productoA:nth-child(4) {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+}
+.productoA:nth-child(5) {
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+}
+.productoA:nth-child(6) {
+	grid-column: 3 / 4;
+	grid-row: 2 / 3;
+}
+.productoA:nth-child(7) {
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
+}
+.productoA:nth-child(8) {
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+}
+.productoA:nth-child(9) {
+	grid-column: 3 / 4;
+	grid-row: 3 / 4;
+}
+.productoA:nth-child(10) {
+	grid-column: 1 / 2;
+	grid-row: 4 / 5;
+}
+.productoA:nth-child(11) {
+	grid-column: 2 / 3;
+	grid-row: 4 / 5;
+}
+.productoA:nth-child(12) {
+	grid-column: 3 / 4;
+	grid-row: 4 / 5;
+}
+
 
 
 /*----------BIJOUTERIE----------------------------*/
@@ -1347,13 +1251,23 @@ body {
 /*----------INICIO----------------------------*/
 .h1 {
 	font-size: 12px;
-	animation-duration: 10s;
+	animation-duration: 8s;
+}
+@keyframes mover {
+	0%{
+		transform: translateX(-80%); 
+	}
+	100%{
+		transform: translateX(20%); 
+	}
 }
 
+
 .ofertas {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 200px);
+	
 	align-items:center;
 	grid-gap: 10px;
 	
@@ -1362,91 +1276,51 @@ body {
 	height: 100%;
 	width:100%;
 }
-.ofertas2 {
-	align-items:center;
-	width:100%;
-	height: 100%;
-	flex-direction: column;
-	
-}
+
 #oferta1 {
 	background-position-y:center;
 	background-size: 90px;
 	font-size: 15px;
 	width:100%;
+	height: 100%;
 }
 
 #oferta1 a {
 	font-size: 12px;
-	top: -5px;
-	left: 0px;
+	top: 100px;
+	left: 5px;
 }
 
-#oferta2 {
-	background-size: 100px;
-	background-position-y:center;
-	font-size: 15px;
-	width:100%;
+#oferta1:nth-child(1) {
+	background-image: url(../imagenes/menuinicio/1oferta.png);
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
 }
-
-#oferta2 a {
-	font-size: 12px;
-	top: -5px;
-	left: 0px;
+#oferta1:nth-child(2) {
+	background-image: url(../imagenes/menuinicio/2oferta.png);
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
 }
-
-#oferta3 {
-	background-size: 100px;
-	background-position-y:center;
-	font-size: 15px;
-	width:100%;
+#oferta1:nth-child(3) {
+	background-image: url(../imagenes/menuinicio/3oferta.png);
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
 }
-
-#oferta3 a {
-	font-size: 12px;
-	top: -5px;
-	left: 0px;
+#oferta1:nth-child(4) {
+	background-image: url(../imagenes/menuinicio/4oferta.png);
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
 }
-
-#oferta4 {
-	background-size: 100px;
-	background-position-y:center;
-	font-size: 15px;
-	width:100%;
+#oferta1:nth-child(5) {
+	background-image: url(../imagenes/menuinicio/5oferta.png);
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
 }
-
-#oferta4 a {
-	font-size: 12px;
-	top: -5px;
-	left: 0px;
+#oferta1:nth-child(6) {
+	background-image: url(../imagenes/menuinicio/6oferta.png);
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
 }
-
-#oferta5 {
-	background-size: 100px;
-	background-position-y:center;
-	font-size: 15px;
-	width:100%;
-}
-
-#oferta5 a {
-	font-size: 12px;
-	top: -5px;
-	left: 0px;
-}
-
-#oferta6 {
-	background-size: 100px;
-	background-position-y: center;
-	font-size: 15px;
-	width:100%;
-}
-
-#oferta6 a {
-	font-size: 12px;
-	top: -5px;
-	left: 0px;
-}
-
 
 /*----------INDUMENTARIA----------------------------*/
 
@@ -1470,8 +1344,8 @@ body {
 
 .indumentaria {
 	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(6, 250px);
 	
 	grid-gap: 10px;
 	width: 100%;
@@ -1480,68 +1354,126 @@ body {
 .productoI {
 	width: 100%;
 	margin: 5px auto;
-
+	
 	color: white;
 	padding-top: 20px;
 	text-align: center;
-	/*border: 1px solid red;*/
 	justify-self: center;
 }
-.productoI img {
-	width: 100%;
+.productoI h4, h5 {
+	font-size: 15px;
+}
 
+.productoI img {
+	width: 75%;
 	border:2px solid black;
 }
 .productoI:nth-child(1) {
-	grid-column: 2 / 5;	
+	grid-column: 1 / 2;	
 	grid-row: 1 / 2;
 }
 .productoI:nth-child(2) {
-	grid-column: 5 / 8;
+	grid-column: 2 / 3;
 	grid-row: 1 / 2;
 }
 .productoI:nth-child(3) {
-	grid-column: 2 / 5;
+	grid-column: 1 / 2;
 	grid-row: 2 / 3;
 }
 .productoI:nth-child(4) {
-	grid-column: 5 / 8;
+	grid-column: 2 / 3;
 	grid-row: 2 / 3;
 }
 .productoI:nth-child(5) {
-	grid-column: 2 / 5;
+	grid-column: 1 / 2;
 	grid-row: 3 / 4;
 }
 .productoI:nth-child(6) {
-	grid-column: 5 / 8;
+	grid-column: 2 / 3;
 	grid-row: 3 / 4;
 }
 .productoI:nth-child(7) {
-	grid-column: 2 / 5;
+	grid-column: 1 / 2;
 	grid-row: 4 / 5;
 }
 .productoI:nth-child(8) {
-	grid-column: 5 / 8;
+	grid-column: 2 / 3;
 	grid-row: 4 / 5;
 }
 .productoI:nth-child(9) {
-	grid-column: 2 / 5;
+	grid-column: 1 / 2;
 	grid-row: 5 / 6;
 }
 .productoI:nth-child(10) {
-	grid-column: 5 / 8;
+	grid-column: 2 / 3;
 	grid-row: 5 / 6;
 }
 .productoI:nth-child(11) {
-	grid-column: 2 / 5;
-	grid-row: 6 / 7
+	grid-column: 1 / 2;
+	grid-row: 6 / 7;
 }
 .productoI:nth-child(12) {
-	grid-column: 5 / 8;
-	grid-row: 6 / 7
+	grid-column: 2 / 3;
+	grid-row: 6 / 7;
 }
 
 /*----------ACCESORIOS----------------------------*/
+.accesorios {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(6, 300px);
+}
+.productoA:nth-child(1) {
+	grid-column: 1 / 2;	
+	grid-row: 1 / 2;
+}
+.productoA:nth-child(2) {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+.productoA:nth-child(3) {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+}
+.productoA:nth-child(4) {
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+}
+.productoA:nth-child(5) {
+	grid-column: 1 / 2;
+	grid-row: 3 / 4;
+}
+.productoA:nth-child(6) {
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+}
+.productoA:nth-child(7) {
+	grid-column: 1 / 2;
+	grid-row: 4 / 5;
+}
+.productoA:nth-child(8) {
+	grid-column: 2 / 3;
+	grid-row: 4 / 5;
+}
+.productoA:nth-child(9) {
+	grid-column: 1 / 2;
+	grid-row: 5 / 6;
+}
+.productoA:nth-child(10) {
+	grid-column: 2 / 3;
+	grid-row: 5 / 6;
+}
+.productoA:nth-child(11) {
+	grid-column: 1 / 2;
+	grid-row: 6 / 7;
+}
+.productoA:nth-child(12) {
+	grid-column: 2 / 3;
+	grid-row: 6 / 7;
+}
+
+
+
 
 
 
