@@ -396,7 +396,7 @@ body {
 	font-family: Amatic sc;
 	padding-top: 20px;
 	text-align: center;
-	
+	margin-bottom: 15px;
 	justify-self: center;
 	font-size: 30px;
 	overflow:hidden;
@@ -404,6 +404,7 @@ body {
 }
 .productoI h4, h5{
 	border-bottom:1px solid white;
+
 	width: 80%;
 	margin:auto;
 }
@@ -909,8 +910,10 @@ body {
 
 /*----------INICIO----------------------------*/
 .h1 {
-	font-size: 12px;
+	font-size: 15px;
 	animation-duration: 12s;
+	padding: 5px;
+
 }
 @keyframes mover {
 	0%{
@@ -1142,15 +1145,26 @@ body {
 	width: 240px;
 }
 .nosotros {
-	width: 100%;	
+	min-width: 135px;
+	
 }
+
 .nosotros h2 {
-	font-size: 25px;
+	color: rgb(230,230,230);
+	margin-bottom: 25px;
+	font-size: 30px;
+	font-family: Amatic SC;
+	/*border: 1px solid grey;*/
+}
+
+.nosotros p {
+	color: rgb(230,230,230);
+	margin-bottom: 10px;
+	font-family: Amatic SC;
+	/*border: 1px solid red;*/
 }
 
 
-
-}
 
 @media (max-width: 480px) { /*VISTA-MOBILE*/
  * {
@@ -1250,16 +1264,20 @@ body {
 
 /*----------INICIO----------------------------*/
 .h1 {
+	
+	text-align: center;
 	font-size: 12px;
-	animation-duration: 8s;
+	color: white;
+	letter-spacing:1px;
+	width: 100%;
+	padding:5px;
+	margin-top: 5px;
+	/*animacion*/
+	animation-name: mover;
+
 }
 @keyframes mover {
-	0%{
-		transform: translateX(-80%); 
-	}
-	100%{
-		transform: translateX(20%); 
-	}
+	
 }
 
 
@@ -1502,12 +1520,11 @@ body {
 	width: 240px;
 }
 .nosotros {
-	width: 100%;	
+	margin:auto;
+	display: flex;
+	flex-direction: column;
+	width: 250px;
 }
-.nosotros h2 {
-	font-size: 25px;
-}
-
 
 
 
