@@ -1,362 +1,112 @@
 * {
-	padding: 0px;
-	margin: 0px;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
-
-body {
-	border: px solid black; 
-	opacity: 0.9; 
-	background-image: url(../imagenes/fondo.jpg);
-	backdrop-filter: blur(100px); /*opacidad*/
-	background-position: top;
-	overflow-x: hidden;
-	
-}
-
-.checkbtn {
-	display: none;
-	color: white;
-	float: left;
-	font-size: 30px;
-	margin: 20px; 
-	cursor: pointer;
-}
-
-#check {
-	display: none;
+.body {
+	background: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(82,82,82,1) 89%, rgba(195,159,255,1) 100%);
 }
 
 /*---------HEADER---------------------------------------------------------------------*/
-.menu {
-	display: flex;
-	background-color: transparent; /*color etc del fondo del header seria*/
-	padding: 10px;
-	flex-direction:row-reverse; 
-	justify-content: center; 
-	flex-wrap: wrap-reverse;
-	background-color: black;
-	
-	
-
-	/*border: 1px solid blue;*/
-
+/*----boton de busqueda*/
+.btn {
+	color: white !important;
+	border: 1px solid white !important;
 }
 
-.menulist {
-
-	display: flex;
-	align-items: center;
-	font-family: Amatic SC;
-	font-size: 25px; /*tamaño de fuente*/
-	background-color: transparent;
-	/*border: 1px groove red;*/
-
+.btn:hover {
+	color: black !important;
+	background-color: white !important;
+	border: 1px solid black !important;
 }
-/*menu vertical de indumentaria*/
-.menuropas {
-	z-index: 80;
-	position: absolute;
-	border:1px solid rgb(50,50,50);
-	list-style: none;
-	margin: 20px;
-	margin-top: 30px;
-	padding-left: 25px;
-	display: none;
-	width: 100px;
-	
-	background-color: rgb(20,20,20);
-	
-}
-.menulist li:hover .menuropas {
-	display: block;	
-}
-.menuropas li a {
-	color: rgb(220, 180, 100);
-}
-.menuropas li a:hover {
-	color: yellow;
-}
-/*menu vertical de accesorios*/
-
-.menuaccesorio {
-	
-	z-index: 80;
-	position: absolute;
-	border:1px solid rgb(50,50,50);
-	list-style: none;
-	margin: 5px;
-	margin-top: 30px;
-	padding-left: 20px;
-	
-	display: none;
-	width: 100px;
-	
-	background-color: rgb(20,20,20);
-}
-
-.menulist li:hover .menuaccesorio {
-	display: block;	
-}
-.menuaccesorio li a {
-	color: rgb(220, 180, 100);
-}
-.menuaccesorio li a:hover {
-	color: yellow;
-}
-
-/*menu vertical de bijouteries*/
-.menubijouteries {
-	z-index: 80;
-	position: absolute;
-	border:1px solid rgb(50,50,50);
-	list-style: none;
-	
-	margin-top: 30px;
-	padding-left: 25px;
-	display: none;
-	width: 110px;
-	
-	background-color: rgb(20,20,20);
-}
-
-.menulist li:hover .menubijouteries {
-	display: block;	
-}
-.menubijouteries li a {
-	color: rgb(220, 180, 100);
-}
-.menubijouteries li a:hover {
-	color: yellow;
-}
-/*------------------------------*/
-.list {
-	
-	display: flex;
-	padding: 16px;
-	color: rgb(212, 165, 50);
-	margin: 10px;
-	/*border: 1px solid rgb(05,91,50)*/
-}
-
-.list i {
-	display: flex;
-	box-sizing: border-box; /*aca modifico los iconos*/
-	align-items: center; /*aligns items para centrar verticalmente los iconos en este caso*/
-	/*border: 1px solid red*/
-}
-
-.list a {
-	display: flex;
-	color: rgb(212, 165, 50);
-	text-decoration: none; /*decoracion de las letras del menu*/
-	/*border: 1px solid blue;*/
-	align-items: center;
-
-}
-.list:hover {
-	color: rgb(255, 238, 69); 
-	
-	
-	
-	
-}
-.list:hover > a { 
-	color: rgb(255, 238, 69); 
-	
-
-}
-
-.padre-icon-search {
-	display: flex;
-	
-	justify-content: space-between;
-	margin: 0 auto; 
-	width: 450px; 
-	/*border: 1px solid orange;*/
-}
-
-.icon {
-	margin-right: 20px;
-	width: 110px;
-	height: 110px;
-	
-	/*border: 1px solid red;*/
-}
-
-.icon img {
-	width: 110px;
-	height: 110px;
-	object-fit: cover;
-	margin-right: 15px;
-	
-	
-	/*border: 1px solid yellow;*/
-}
-
-.padre-search {
-	display: flex; 
-	align-items: center; /*aca centre el input verticalmente dentro de la caja padre*/
-	margin-left: 15px;
-	/*border: 1px solid green*/
-    
-}
-
-.search {
-	width: 130px;
-	height: 40px;
-	font-size: 20px;
-	font-family: Amatic SC;
-	background-color: transparent;
-	color: rgb(212, 165, 50);
-	/*border: 2px inset grey;*/
-
-}
-
-/*--------------MAIN----------------------------------------------------------------*/
-
-.tituloprincipal {
-	display: block;
-	text-align: center;
-	font-size: 20px;
+/*----Input----*/
+.form-control {
 	font-family: amatic sc;
-	color: rgb(0,0,0);
-	background-color: rgb(212, 165, 50);
-	padding: 10px;
-	position: sticky;
-	/*opacity: 0.9;*/
-	top:0;
-	border-bottom: 5px solid black;
+	font-size: 20px !important;
+	color: rgb(212, 165, 50)!important;
+	background-color: black !important;
+}
+/*------navegacion-----*/
+
+.navbar-toggler {
 	
+	background-color:#7f7777 !important;
+}
+.navegacion {
+	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(9,23,54,1) 50%, rgba(129,95,199,1) 100%);
+	text-align: center;
+
 }
 
-.TP a {
-	text-decoration: none;
-	margin:20px;
+.navegacion a {
 	color: black;
+	font-size: 25px;
 	font-weight: bold;
-	
+	font-family: Amatic SC;
+	color: rgb(212, 165, 50);
+	grid-gap: 5px;
+	text-align: center;
+}
+.navegacion a:focus {
+	color: yellow;
 }
 
-.TP a:hover {
-	border-bottom: 1px solid black;
+.navegacion a:hover {
+	color: yellow;
+	
 }
+/*-------------SUBMENU-------------------------*/
+.dropdown-menu {
+	background: linear-gradient(0deg, rgba(6,1,27,1) 0%, rgba(30,11,69,1) 50%, rgba(11,1,28,1) 100%) !important;
+}
+
+.dropdown .dropdown-item {
+
+}
+
+.dropdown .dropdown-item:hover {
+	background: linear-gradient(0deg, rgba(6,1,27,1) 0%, rgba(30,11,69,1) 50%, rgba(11,1,28,1) 100%);;
+  	color:yellow;
+}
+/*Fin del menu bootstrap----------------*/
 
 
 /*INICIO---------------------------------------*/
-.friday img{
-	width: 100%;
-	filter: brightness(90%); /*brillo*/
-	border-bottom: 5px solid #ffa;
-
-}
-
-.ofertas {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr); ;
-	grid-template-rows: 200px 200px;
-	padding: 10px;
-	grid-gap: 10px;
-	height: 100%;
-	width: 100%;
-	border-top: 5px solid #ffa;
-}
-#oferta1 {
-	border:3px solid black;
-	background-image: url(../imagenes/menuinicio/1oferta.png);
-	background-repeat: no-repeat;
-	background-size: 130px;
-	background-position-x: right;
-	background-color: white;
-	font-size: 20px;
-	width: 100%;
-	border-radius: 5%;
-
-}
-#oferta1 h3, h4 {padding: 5px;}
-#oferta1 a {
-	font-family: arial;
-	font-size: 15px;
-	padding: 5px;
-	color: black;
-	text-decoration: none;
-	position: relative;
-	top: 85px;
-	left: 10px;
-	border:1px solid;
-	border-radius: 10%;
-}
-#oferta1 a:hover {
-	background-color: rgb(200,50,50);
-	border:1px solid rgb(200,50,50);
-}
-#oferta1:hover {
-	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
-	position: relative;
-	top:-2px;
-	cursor: pointer;
-}
-#oferta1:nth-child(1) {
-	background-image: url(../imagenes/menuinicio/1oferta.png);
-	grid-column: 1 / 2;
-	grid-row: 1 / 2;
-}
-#oferta1:nth-child(2) {
-	background-image: url(../imagenes/menuinicio/2oferta.png);
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-}
-#oferta1:nth-child(3) {
-	background-image: url(../imagenes/menuinicio/3oferta.png);
-	grid-column: 3 / 4;
-	grid-row: 1 / 2;
-}
-#oferta1:nth-child(4) {
-	background-image: url(../imagenes/menuinicio/4oferta.png);
-	grid-column: 4 / 5;
-	grid-row: 1 / 2;
-}
-#oferta1:nth-child(5) {
-	background-image: url(../imagenes/menuinicio/5oferta.png);
-	grid-column: 2 / 3;
-	grid-row: 2 / 3;
-}
-#oferta1:nth-child(6) {
-	background-image: url(../imagenes/menuinicio/6oferta.png);
-	grid-column: 3 / 4;
-	grid-row: 2 / 3;
-}
-
 
 .h1 {
-	
-	text-align: center;
-	font-size: 20px;
+	font-family: arial;
+	font-size: ;
 	color: white;
-	
-	width: 100%;
-	letter-spacing:10px;
-	font-family: amatic sc;
-	width: 1500px;
-	padding:20px;
-	margin-top: 10px;
-
-	/*animacion*/
-	animation-name: mover;
-	animation-duration: 15s;
-	animation-iteration-count: infinite;
-	animation-direction: reverse;
-	animation-timing-function: linear;
+	border: 5px solid white;
+	padding: 10px 5px 10px 5px;
+	border-radius: 50px;
 
 }
-@keyframes mover {
-	0%{
-		transform: translateX(-100%); 
-	}
-	100%{
-		transform: translateX(80%); 
-	}
+/*------Contenido cartas-----*/
+.card-img-top {
+	width: 50% !important;
+	margin: auto;
+	height: 50% !important;
+
 }
+.card {
+	margin: 10px auto;
+
+}
+/*------Carrusel------*/
+.carrusel {
+	border: 15px solid black;
+	border-radius: 200px;
+	background-color: white;
+	margin: 15px 0 15px 0;
+}
+.carrusel-img {
+	margin: auto;
+	max-width: 350px;
+	border-radius: 50%;
+	object-position: center;
+}
+
 
 
 
@@ -729,806 +479,26 @@ body {
 }
 
 /*------------FOOTER-------------------------------------------------------------------*/
-.pie {
-	display: grid;
-	justify-content: center;
-	background-color: rgb(0,0,04);
-	border-top: 2px solid rgb(80,80,80);
-	color: rgb(50,50,80); 
-	/*border:5px solid white;*/
+
+.contenedor-footer {
+	border-top: 3px solid grey;
 }
-
-.grupo1 {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 250px;
-	/*border: 1px solid red;*/
+.img-logo {
+	min-width: 180px;
 }
-
-.logotipo {
-	
-	
-	width: 100%;
-	height: 100%;
-	
-	/*border: 1px solid blue;*/
-
-}
-
-.grupo1 .logotipo figure img {
-	margin: 15px;
-
-	width: 300px;
-	/*border: 1px solid green;*/
-}
-
-.nosotros {
-	align-self: center; /*centrado verticalmente cuando es el contenedor padre*/
-	text-align: center;
-	min-width: 135px;
-	/*border: 1px solid violet;*/
-}
-
-.nosotros h2 {
-	color: rgb(230,230,230);
-	margin-bottom: 25px;
-	font-size: 30px;
-	font-family: Amatic SC;
-	/*border: 1px solid grey;*/
-}
-
-.nosotros p {
-	color: rgb(230,230,230);
-	margin-bottom: 10px;
-	font-family: Amatic SC;
-	/*border: 1px solid red;*/
-}
-
-.redesociales {
-	
-	font-size: 25px;
-	font-family: Amatic SC;
-	margin: 10px;
-	text-align: center;
-	align-self: center;
-	color: rgb(230,230,230);
-	/*border: 1px solid yellow;*/
-}
-
-.redesocialeshijo {
-	display: grid;
-	grid-template-columns: repeat(4, 70px);
-
-	margin: 20px;
-	/*border: 1px solid red;*/
-	padding:10px;
-}
-
-.redesocialeshijo a {
-	display: grid;
-	align-items: center; /*centra verticalmente cuando es el hijo*/
-	text-decoration: none;
-	width: 45px;
-	height: 45px;
-	margin:12px;
-	color: white;
-	background-color: rgb(20,20,50);
-	
-	/*border: 1px solid rgb(200,200,200);*/
-}
-
-
-
-.pie .grupo2 {
-	
-	background-color: transparent;
-	padding: 15px;
-	text-align: center; /*nose xq no lo centra*/
-	color: rgb(230,230,230);
-	/*border: 1px solid blue;*/
-}
-/*--------------RESPONSIVE----------------------------------------------*/
-/*--------------RESPONSIVE----------------------------------------------*/
-/*--------------RESPONSIVE----------------------------------------------*/
-
-@media (max-width: 768px) { /*VISTA-TABLET*/
-/*-----------MENU-RESPONSIVE---------------------*/
-* {
- 	box-sizing: border-box;
- 	margin:0; 
- 	padding: 0;
- }
- body {
- 	border:0px solid;
-}
-
-
-.menulist li:hover .menuaccesorio {
-	display: none;	
-}
-
-.menulist li:hover .menuropas {
-	display: none;	
-}
-
-.menulist li:hover .menubijouteries {
-	display: none;	
-}
-.list:hover {
-	border:none;
-}
-
-#check:checked + .menulist {
-	display: block;
-
-}
-
-.menu {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 120px 70px; 
-	max-width: 100%;
-	height: 100%;
-	/*border:1px solid green;*/
-
-
-}
-
-.padre-icon-search {
-	grid-row: 1 / 2;
-	width: 100%; /*ancho de la caja contenedora*/
-	/*border: 1px solid orange;*/
-}
-
-.menu a {
-	display: block;
-	text-align: center;
-	/*border: 1px solid orange;*/
-}
-.menu .menulist > li {
-	display: inline;
-}
-
-.checkbtn {
-	display: inline;
-	grid-row: 2 / 3;
-	color: white;
-	text-align: center;
-	font-size: 30px;
-	margin: 15px; 
-	cursor: pointer;
-}
-
-.menulist {
-	display: none;
-	font-size: 30px;
-}
-.menulist i{
-	display: none; /*saque los iconos*/
-}
-
-
-/*----------INICIO----------------------------*/
-.h1 {
-	font-size: 15px;
-	animation-duration: 12s;
-	padding: 5px;
-
-}
-@keyframes mover {
-	0%{
-		transform: translateX(-80%); 
-	}
-	100%{
-		transform: translateX(40%); 
-	}
-}
-
-.ofertas {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 200px);
-	
-	align-items:center;
-	grid-gap: 10px;
-	
-	border-top: 5px solid #ffa;
-	
-	height: 100%;
-	width:100%;
-}
-
-#oferta1 {
-	background-position-y:center;
-	background-size: 110px;
-	font-size: 15px;
-	width:100%;
-	height: 100%;
-}
-
-#oferta1 a {
-	font-size: 12px;
-	top: 100px;
-	left: 5px;
-}
-
-#oferta1:nth-child(1) {
-	background-image: url(../imagenes/menuinicio/1oferta.png);
-	grid-column: 1 / 2;
-	grid-row: 1 / 2;
-}
-#oferta1:nth-child(2) {
-	background-image: url(../imagenes/menuinicio/2oferta.png);
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-}
-#oferta1:nth-child(3) {
-	background-image: url(../imagenes/menuinicio/3oferta.png);
-	grid-column: 3 / 4;
-	grid-row: 1 / 2;
-}
-#oferta1:nth-child(4) {
-	background-image: url(../imagenes/menuinicio/4oferta.png);
-	grid-column: 1 / 2;
-	grid-row: 2 / 3;
-}
-#oferta1:nth-child(5) {
-	background-image: url(../imagenes/menuinicio/5oferta.png);
-	grid-column: 2 / 3;
-	grid-row: 2 / 3;
-}
-#oferta1:nth-child(6) {
-	background-image: url(../imagenes/menuinicio/6oferta.png);
-	grid-column: 3 / 4;
-	grid-row: 2 / 3;
-}
-
-
-/*----------INDUMENTARIA----------------------------*/
-
-.publicidadI {
+.nosotros h2{
 	font-size: 20px;
-	text-align: center;
-	background-color: black;
-	color:white;
-	border-top: 1px solid grey;
-
 }
-.ofertaI {
-	display: flex;
-}
-.ofertaI img {
-	width: 33.3%;
-	height: 350px;
-	object-fit: cover;
-	border:2px solid black;
-}
-
-.indumentaria {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, 1fr);
-}
-.productoI img {
-	width: 90%;
-}
-.productoI:nth-child(1) {
-	grid-column: 1 / 2;	
-	grid-row: 1 / 2;
-}
-.productoI:nth-child(2) {
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-}
-.productoI:nth-child(3) {
-	grid-column: 3 / 4;
-	grid-row: 1 / 2;
-}
-.productoI:nth-child(4) {
-	grid-column: 1 / 2;
-	grid-row: 2 / 3;
-}
-.productoI:nth-child(5) {
-	grid-column: 2 / 3;
-	grid-row: 2 / 3;
-}
-.productoI:nth-child(6) {
-	grid-column: 3 / 4;
-	grid-row: 2 / 3;
-}
-.productoI:nth-child(7) {
-	grid-column: 1 / 2;
-	grid-row: 3 / 4;
-}
-.productoI:nth-child(8) {
-	grid-column: 2 / 3;
-	grid-row: 3 / 4;
-}
-.productoI:nth-child(9) {
-	grid-column: 3 / 4;
-	grid-row: 3 / 4;
-}
-.productoI:nth-child(10) {
-	grid-column: 1 / 2;
-	grid-row: 4 / 5;
-}
-.productoI:nth-child(11) {
-	grid-column: 2 / 3;
-	grid-row: 4 / 5;
-}
-.productoI:nth-child(12) {
-	grid-column: 3 / 4;
-	grid-row: 4 / 5;
-}
-
-
-
-
-
-/*----------ACCESORIOS----------------------------*/
-.accesorios {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, 300px);
-}
-.productoA:nth-child(1) {
-	grid-column: 1 / 2;	
-	grid-row: 1 / 2;
-}
-.productoA:nth-child(2) {
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-}
-.productoA:nth-child(3) {
-	grid-column: 3 / 4;
-	grid-row: 1 / 2;
-}
-.productoA:nth-child(4) {
-	grid-column: 1 / 2;
-	grid-row: 2 / 3;
-}
-.productoA:nth-child(5) {
-	grid-column: 2 / 3;
-	grid-row: 2 / 3;
-}
-.productoA:nth-child(6) {
-	grid-column: 3 / 4;
-	grid-row: 2 / 3;
-}
-.productoA:nth-child(7) {
-	grid-column: 1 / 2;
-	grid-row: 3 / 4;
-}
-.productoA:nth-child(8) {
-	grid-column: 2 / 3;
-	grid-row: 3 / 4;
-}
-.productoA:nth-child(9) {
-	grid-column: 3 / 4;
-	grid-row: 3 / 4;
-}
-.productoA:nth-child(10) {
-	grid-column: 1 / 2;
-	grid-row: 4 / 5;
-}
-.productoA:nth-child(11) {
-	grid-column: 2 / 3;
-	grid-row: 4 / 5;
-}
-.productoA:nth-child(12) {
-	grid-column: 3 / 4;
-	grid-row: 4 / 5;
-}
-
-
-
-/*----------BIJOUTERIE----------------------------*/
-
-
-/*----------PERFUMES----------------------------*/
-
-
-/*----------FOOTER----------------------------*/
-
-.grupo1 {
-	grid-template-columns: 1fr;
-	grid-template-rows: 200px;
-}
-.logotipo {
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	/*border: 1px solid blue;*/
-}
-.grupo1 .logotipo figure img {
-	margin: 15px;
-	width: 240px;
-}
-.nosotros {
-	min-width: 135px;
-	
-}
-
-.nosotros h2 {
-	color: rgb(230,230,230);
-	margin-bottom: 25px;
+.iconos-footer a{
 	font-size: 30px;
-	font-family: Amatic SC;
-	/*border: 1px solid grey;*/
-}
-
-.nosotros p {
-	color: rgb(230,230,230);
-	margin-bottom: 10px;
-	font-family: Amatic SC;
-	/*border: 1px solid red;*/
-}
-
-
-
-@media (max-width: 480px) { /*VISTA-MOBILE*/
- * {
- 	box-sizing: border-box;
- 	margin:0; 
- 	padding: 0;
- }
- body {
- 	border:0px solid;
- }
-/*-----------MENU-RESPONSIVE-MOBILE-----------------*/
-.menulist li:hover .menuaccesorio {
-	display: none;	
-}
-
-.menulist li:hover .menuropas {
-	display: none;	
-}
-
-.menulist li:hover .menubijouteries {
-	display: none;	
-}
-.list:hover {
-	border:none; /*saltaba un error con esto*/
-}
-
-#check:checked + .menulist {
-	display: block;
-
-}
-
-.menu {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 120px 70px; /*estuve como 2 horas viendo cual era el problema de xq cuando el menu estaba cerrado me ocupaba lugar y la solucion era ponerle solo 2 filas en vez de 3*/
-	max-width: 100%;
-	height: 100%;
-	/*border:1px solid green;*/
-
-
-}
-
-.padre-icon-search {
-	grid-row: 1 / 2;
-	width: 100%; /*ancho de la caja contenedora*/
-	/*border: 1px solid orange;*/
-}
-
-.menu a {
-	display: block;
-	text-align: center;
-	/*border: 1px solid orange;*/
-}
-.menu .menulist > li {
-	display: inline;
-}
-
-.checkbtn {
-	display: inline;
-	grid-row: 2 / 3;
+	text-decoration: none;
+	margin: 5px;
 	color: white;
-	text-align: center;
-	font-size: 30px;
-	margin: 15px; 
-	cursor: pointer;
+	background-color: rgb(50,50,200);
+	padding: 10px 12px;
+	border-radius: 10px; 
+}
+/*--------------RESPONSIVE----------------------------------------------*/
+/*--------------RESPONSIVE----------------------------------------------*/
+/*--------------RESPONSIVE----------------------------------------------*/
 
-	
-
-	/*border:1px solid red;*/
-}
-
-.menulist {
-	display: none;
-	/*grid-row: 3 / 4;*/ /*funciona igual sin esto*/
-	
-	height: 320px;
-	text-align: center;
-	font-size: 25px;
-	/*border:1px solid white;*/
-}
-.menulist li {
-	border:none;
-
-}
-
-.menulist i{
-	display: none; /*saque los iconos*/
-}
-/*-MAIN-RESPONSIVE-MOBILE---------*/
-.tituloprincipal {
-	display: block;
-	text-align: center;
-	font-size: 15px;	
-	width: 100%;
-}
-
-
-/*----------INICIO----------------------------*/
-.h1 {
-	
-	text-align: center;
-	font-size: 12px;
-	color: white;
-	letter-spacing:1px;
-	width: 100%;
-	padding:5px;
-	margin-top: 5px;
-	/*animacion*/
-	animation-name: mover;
-
-}
-@keyframes mover {
-	
-}
-
-
-.ofertas {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(3, 200px);
-	
-	align-items:center;
-	grid-gap: 10px;
-	
-	border-top: 5px solid #ffa;
-	
-	height: 100%;
-	width:100%;
-}
-
-#oferta1 {
-	background-position-y:center;
-	background-size: 90px;
-	font-size: 15px;
-	width:100%;
-	height: 100%;
-}
-
-#oferta1 a {
-	font-size: 12px;
-	top: 100px;
-	left: 5px;
-}
-
-#oferta1:nth-child(1) {
-	background-image: url(../imagenes/menuinicio/1oferta.png);
-	grid-column: 1 / 2;
-	grid-row: 1 / 2;
-}
-#oferta1:nth-child(2) {
-	background-image: url(../imagenes/menuinicio/2oferta.png);
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-}
-#oferta1:nth-child(3) {
-	background-image: url(../imagenes/menuinicio/3oferta.png);
-	grid-column: 1 / 2;
-	grid-row: 2 / 3;
-}
-#oferta1:nth-child(4) {
-	background-image: url(../imagenes/menuinicio/4oferta.png);
-	grid-column: 2 / 3;
-	grid-row: 2 / 3;
-}
-#oferta1:nth-child(5) {
-	background-image: url(../imagenes/menuinicio/5oferta.png);
-	grid-column: 1 / 2;
-	grid-row: 3 / 4;
-}
-#oferta1:nth-child(6) {
-	background-image: url(../imagenes/menuinicio/6oferta.png);
-	grid-column: 2 / 3;
-	grid-row: 3 / 4;
-}
-
-/*----------INDUMENTARIA----------------------------*/
-
-.publicidadI {
-	font-size: 15px;
-	text-align: center;
-	background-color: black;
-	color:white;
-	border-top: 1px solid grey;
-
-}
-.ofertaI {
-	display: flex;
-}
-.ofertaI img {
-	width: 33.3%;
-	height: 300px;
-	object-fit: cover;
-	border:2px solid black;
-}
-
-.indumentaria {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(6, 250px);
-	
-	grid-gap: 10px;
-	width: 100%;
-}
-
-.productoI {
-	width: 100%;
-	margin: 5px auto;
-	
-	color: white;
-	padding-top: 20px;
-	text-align: center;
-	justify-self: center;
-}
-.productoI h4, h5 {
-	font-size: 15px;
-}
-
-.productoI img {
-	width: 75%;
-	border:2px solid black;
-}
-.productoI:nth-child(1) {
-	grid-column: 1 / 2;	
-	grid-row: 1 / 2;
-}
-.productoI:nth-child(2) {
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-}
-.productoI:nth-child(3) {
-	grid-column: 1 / 2;
-	grid-row: 2 / 3;
-}
-.productoI:nth-child(4) {
-	grid-column: 2 / 3;
-	grid-row: 2 / 3;
-}
-.productoI:nth-child(5) {
-	grid-column: 1 / 2;
-	grid-row: 3 / 4;
-}
-.productoI:nth-child(6) {
-	grid-column: 2 / 3;
-	grid-row: 3 / 4;
-}
-.productoI:nth-child(7) {
-	grid-column: 1 / 2;
-	grid-row: 4 / 5;
-}
-.productoI:nth-child(8) {
-	grid-column: 2 / 3;
-	grid-row: 4 / 5;
-}
-.productoI:nth-child(9) {
-	grid-column: 1 / 2;
-	grid-row: 5 / 6;
-}
-.productoI:nth-child(10) {
-	grid-column: 2 / 3;
-	grid-row: 5 / 6;
-}
-.productoI:nth-child(11) {
-	grid-column: 1 / 2;
-	grid-row: 6 / 7;
-}
-.productoI:nth-child(12) {
-	grid-column: 2 / 3;
-	grid-row: 6 / 7;
-}
-
-/*----------ACCESORIOS----------------------------*/
-.accesorios {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(6, 300px);
-}
-.productoA:nth-child(1) {
-	grid-column: 1 / 2;	
-	grid-row: 1 / 2;
-}
-.productoA:nth-child(2) {
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
-}
-.productoA:nth-child(3) {
-	grid-column: 1 / 2;
-	grid-row: 2 / 3;
-}
-.productoA:nth-child(4) {
-	grid-column: 2 / 3;
-	grid-row: 2 / 3;
-}
-.productoA:nth-child(5) {
-	grid-column: 1 / 2;
-	grid-row: 3 / 4;
-}
-.productoA:nth-child(6) {
-	grid-column: 2 / 3;
-	grid-row: 3 / 4;
-}
-.productoA:nth-child(7) {
-	grid-column: 1 / 2;
-	grid-row: 4 / 5;
-}
-.productoA:nth-child(8) {
-	grid-column: 2 / 3;
-	grid-row: 4 / 5;
-}
-.productoA:nth-child(9) {
-	grid-column: 1 / 2;
-	grid-row: 5 / 6;
-}
-.productoA:nth-child(10) {
-	grid-column: 2 / 3;
-	grid-row: 5 / 6;
-}
-.productoA:nth-child(11) {
-	grid-column: 1 / 2;
-	grid-row: 6 / 7;
-}
-.productoA:nth-child(12) {
-	grid-column: 2 / 3;
-	grid-row: 6 / 7;
-}
-
-
-
-
-
-
-/*----------BEJUTERIE----------------------------*/
-
-
-
-/*----------PERFUMES----------------------------*/
-
-
-
-/*----------FOOTER----------------------------*/
-
-.grupo1 {
-	grid-template-columns: 1fr;
-	grid-template-rows: 200px;
-}
-.logotipo {
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	/*border: 1px solid blue;*/
-}
-.grupo1 .logotipo figure img {
-	margin: 15px;
-	width: 240px;
-}
-.nosotros {
-	margin:auto;
-	display: flex;
-	flex-direction: column;
-	width: 250px;
-}
-
-
-
-
-
-
-}
