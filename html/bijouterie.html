@@ -4,6 +4,7 @@
 	<!--Css-->
 	<link rel="stylesheet" href="../css/style.css"/>
 	<!--Metadatos-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="keywords" content="Ropa,Perfumes,Accesorios,Bijouterie">
 	<meta name="description" content="Tienda Lika es un negocio dedicado a la venta de indumentaria y demas productos para la dama y el caballero">
@@ -16,12 +17,13 @@
 	<script src="https://kit.fontawesome.com/919ad6754f.js" crossorigin="anonymous"></script> <!-- script para poder usar iconos-->
 	<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script> <!--para el live reload-->
 	<!--Titulo-->
-	<title>Tienda Lika - Indumentaria</title>
+	<title>Tienda Lika - Bijouterie</title>
 	<!--Bootstrap-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 <body>
+	<!--barra de navegacion-->
 	<!--barra de navegacion-->
 	<header>
 		<nav class="navegacion navbar navbar-expand-md">
@@ -42,9 +44,9 @@
 								Indumentaria
 							</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Hombres</a></li>
-								<li><a class="dropdown-item" href="#">Mujeres</a></li>
-								<li><a class="dropdown-item" href="#">Niños</a></li>
+								<li><a class="dropdown-item" href="indumentarias/hombres.html">Hombres</a></li>
+								<li><a class="dropdown-item" href="indumentarias/mujeres.html">Mujeres</a></li>
+								<li><a class="dropdown-item" href="indumentarias/niños.html">Niños</a></li>
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="indumentaria.html">Indumentaria general</li>
 							</ul>
@@ -54,10 +56,10 @@
 								Accesorios
 							</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">mochilas</a></li>
-								<li><a class="dropdown-item" href="#">carteras</a></li>
-								<li><a class="dropdown-item" href="#">pañuelos</a></li>
-								<li><a class="dropdown-item" href="#">billeteras</a></li>
+								<li><a class="dropdown-item" href="accesorios/mochilas.html">mochilas</a></li>
+								<li><a class="dropdown-item" href="accesorios/carteras.html">carteras</a></li>
+								<li><a class="dropdown-item" href="accesorios/pañuelos.html">pañuelos</a></li>
+								<li><a class="dropdown-item" href="accesorios/billeteras.html">billeteras</a>
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="accesorios.html">Accesorios general</li>
 							</ul>
@@ -67,9 +69,9 @@
 								Bijouterie
 							</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Pulceras</a></li>
-								<li><a class="dropdown-item" href="#">Cadenas</a></li>
-								<li><a class="dropdown-item" href="#">Anillos</a></li>
+								<li><a class="dropdown-item" href="bijouteries/pulceras.html">Pulceras</a></li>
+								<li><a class="dropdown-item" href="bijouteries/cadenas.html">Cadenas</a></li>
+								<li><a class="dropdown-item" href="bijouteries/anillos.html">Anillos</a></li>
 							</ul>
        				    </li>
 						<li class="nav-item">
@@ -77,8 +79,8 @@
 						</li>
 					</ul>
 					<form class="d-flex" role="search">
-						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success" type="submit">Search</button>
+						<input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+						<button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
 					</form>
 				</div>
 			</div>
@@ -86,105 +88,153 @@
 	</header>
 
 	<main>
-		<div class="tituloprincipal">
-			<ul class="TP">
+		<!--Subtitulo-->
+		<div class="container-fluid text-center subtitulo">
+			<ul>
 				<li>
-					<h1>Bijouterie</h1>
-					<a href="#">pulceras</a>
-					<a href="#">cadenitas</a>
-					<a href="#">anillos</a>
+					<h1>BIJOUTERIE</h1>
+					<a href="bijouteries/pulceras.html">Pulceras</a>
+					<a href="bijouteries/cadenas.html">Cadenas</a>
+					<a href="bijouteries/anillos.html">Anillos</a>
 				</li>
 			</ul>
 		</div>
-		<div class="bijouteries">
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-			<div class="productoB">
-				<img src="../imagenes/menubijouterie/bijouterie.jpg" alt="" title="">
-				<h4>aritos dorados acero quirurquico</h4>
-				<h5>50000$</h5>
-			</div>
-		</div>
-	</main>
-	<footer class="pie">
-		<div class="grupo1">
-			<div class="logotipo">
-				<figure>
-					<a href="#">
-						<img src="../imagenes/logolika.png" alt="Logotipo Lika" title="Tienda Lika">
-					</a>
-				</figure>
-			</div>
-			<div class="nosotros">
-				<h2>SOBRE NOSOTROS</h2>
-				<p>Somos una tienda que hace mas de 10 años <br>que estamos en este rubro</p>
-				<p>Hicimos esta pagina web para poder crecer <br> asi iremos subiendo nuevos productos y mejorando</p>
-			</div>
-			<div class="redesociales">
-				<h2>CONTACTANOS</h2>
-				<div class="redesocialeshijo">
-					<a href="#" class="fa fa-facebook"></a>
-					<a href="#" class="fa fa-instagram"></a>
-					<a href="#" class="fa-brands fa-whatsapp"></a>
-					<a href="contacto.html" class="fa fa-envelope"></a>
+		<!--Contenido-->
+		<section class="container text-center">
+			<div class="row">
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/panta.png" class="card-img-top img-fluid" alt="mochilas">
+					<div class="card-body">
+						<h5 class="card-title">Joggings Nike</h5>
+						<p class="card-text">11000$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/panta2.png" class="card-img-top img-fluid" alt="conjuntos">
+					<div class="card-body">
+						<h5 class="card-title">Pantalon Nike</h5>
+						<p class="card-text">10000$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/panta3.png" class="card-img-top img-fluid" alt="carteras">
+					<div class="card-body">
+						<h5 class="card-title">Joggings</h5>
+						<p class="card-text">9000$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/panta4.png" class="card-img-top img-fluid" alt="carteras">
+					<div class="card-body">
+						<h5 class="card-title">Pants White</h5>
+						<p class="card-text">12000$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/remera1.png" class="card-img-top img-fluid" alt="carteras">
+					<div class="card-body">
+						<h5 class="card-title">Remeras deportivas</h5>
+						<p class="card-text">4000$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/remera2.png" class="card-img-top img-fluid" alt="carteras">
+					<div class="card-body">
+						<h5 class="card-title">Remeras algodon</h5>
+						<p class="card-text">3000$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/remera3.png" class="card-img-top img-fluid" alt="carteras">
+					<div class="card-body">
+						<h5 class="card-title">Remeras fibrana</h5>
+						<p class="card-text">3500$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/remera4.png" class="card-img-top img-fluid" alt="carteras">
+					<div class="card-body">
+						<h5 class="card-title">Remeras Converse</h5>
+						<p class="card-text">6000$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/ropamujer1.png" class="card-img-top img-fluid" alt="carteras">
+					<div class="card-body">
+						<h5 class="card-title">Remeras de verano</h5>
+						<p class="card-text">2000$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/ropamujer2.png" class="card-img-top img-fluid" alt="carteras">
+					<div class="card-body">
+						<h5 class="card-title">Remeras cortas</h5>
+						<p class="card-text">2500$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/ropamujer3.png" class="card-img-top img-fluid" alt="carteras">
+					<div class="card-body">
+						<h5 class="card-title">Vestido Puma</h5>
+						<p class="card-text">4000$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
+				</div>
+				<div class="card-indumentaria card col-12 col-md-4" style="width: 16rem;">
+					<img src="../imagenes/menuropa/ropamujer4.png" class="card-img-top img-fluid" alt="carteras">
+					<div class="card-body">
+						<h5 class="card-title">Vestido Adidas</h5>
+						<p class="card-text">4500$</p>
+						<a href="#" class="btn btn-dark">Ver producto</a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="grupo2">
-			<small>&copy; 2022 <b>Tienda Lika<b> - Todos los derechos reservados</small>
+			<a href="#" target="_blank" rel="noopener noreferrer">
+			<button type="button" class="btn-ver-mas btn btn-info">Ver mas
+				<i class="bi bi-arrow-right-circle-fill"></i>
+			</button>
+		</section>
+	</main>
+	<!--FOOTER-->
+	<footer>
+		<div class="container-fluid text-center contenedor-footer">
+				<div class="row">
+					<div class="col-12 col-md-4">
+						<figure>
+							<a href="#">
+								<img src="../imagenes/logolika.png" class="img-fluid img-logo" alt="Logotipo Lika" title="Tienda Lika">
+							</a>
+						</figure>
+					</div>
+					<div class="col-12 col-md-4 align-self-center nosotros">
+						<h2>SOBRE NOSOTROS</h2>
+						<p>Somos una tienda que hace mas de 10 años que estamos en este rubro</p>
+						<p>dedicandonos a vender los mejores productos para el usuario</p>
+					</div>
+					<div class="col-12 col-md-4 align-self-center">
+						<h2>CONTACTANOS</h2>
+						<div class="iconos-footer">
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-instagram"></a>
+						<a href="https://api.whatsapp.com/send?phone=542323649699" class="fa-brands fa-whatsapp" target="_BLANK"></a>
+						<a href="contacto.html" class="fa fa-envelope"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-center">
+				<small>&copy; 2022 <b>Tienda Lika<b> - Todos los derechos reservados</small>
+			</div>
 		</div>
 	</footer>
 	<!--Bootstrap-->

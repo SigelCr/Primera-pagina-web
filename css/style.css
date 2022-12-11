@@ -3,7 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-.body {
+body {
 	background: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(82,82,82,1) 89%, rgba(195,159,255,1) 100%);
 }
 
@@ -72,6 +72,28 @@
 
 
 /*INICIO---------------------------------------*/
+.subtitulo-inicio {
+	background-color: rgb(212, 165, 50);
+	font-size: 17px;
+	border: 2px solid black;
+	padding-top: 15px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	margin-bottom: 15px;
+}
+.subtitulo-inicio a {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0 20px 0 20px;
+
+}
+.subtitulo-inicio a:hover {
+	color: rgb(30,30,15);
+	border-bottom: 2px solid black;
+	
+}
 
 .h1 {
 	font-family: arial;
@@ -80,8 +102,12 @@
 	border: 5px solid white;
 	padding: 10px 5px 10px 5px;
 	border-radius: 50px;
-
 }
+.h2-inicio {
+	margin-bottom: 20px;
+	color: rgb(200,180,220);
+}
+
 /*------Contenido cartas-----*/
 .card-img-top {
 	width: 50% !important;
@@ -111,169 +137,100 @@
 
 
 /*INDUMENTARIA----------------------------------------*/
-.publicidadI {
+/*correcion de errores que molestaban*/
+.subtitulo li {
+	list-style-type: none;
+	text-decoration: none;
+}
+.subtitulo ul {
+	padding-inline-start: 0px;
+}
+.subtitulo-inicio li {
+	list-style-type: none;
+	text-decoration: none;
+}
+.subtitulo-inicio ul {
+	padding-inline-start: 0px;
+}
+/*correcion de errores que molestaban*/
+
+.carrusel-indumentaria {
+	border: 1px solid;
+	max-height: 300px;
+	margin: auto;
+}
+
+.carrusel-img-indumentaria {
+	margin: auto;
+	width: 90%;
+	max-height: 300px;
+	object-position: center;
+	border: 5px solid black;
+}
+
+
+.titulo {
 	font-size: 30px;
 	text-align: center;
-	background-color: black;
+	background-color: rgb(8,8,5);
 	color:white;
 	border-top: 1px solid grey;
-}
-.ofertaI {
-	display: flex;
-}
-.ofertaI img {
-	width: 34%;
-	height: 500px;
-	object-fit: cover;
-	border:2px solid black;
+	padding: 10px 10px;
 }
 
-.indumentaria {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 1fr 1fr 1fr;
-	justify-content: center;
-	grid-gap: 10px;
-	width: 100%;
-	padding: 0px;
-	margin-top: 20px;
-	/*border: 2px solid white;*/
-}
-
-.productoI {
-	width: 100%;
-	color: white;
-	font-family: Amatic sc;
-	padding-top: 20px;
-	text-align: center;
-	margin-bottom: 15px;
-	justify-self: center;
-	font-size: 30px;
-	overflow:hidden;
-
-}
-.productoI h4, h5{
-	border-bottom:1px solid white;
-
-	width: 80%;
-	margin:auto;
-}
-
-.productoI img {
-	width: 75%;
+.subtitulo {
+	background-color: rgb(212, 165, 50);
+	border: 3px solid black;
 	
-	border:5px solid black;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	margin-bottom: 30px;
+}
+
+
+.subtitulo a {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0 10px 0 10px;
 
 }
 
-.productoI img:hover {
-	cursor: pointer;
-	box-shadow: 10px 10px 8px 0px rgb(0,0,0);
+.subtitulo a:hover {
+	color: rgb(30,30,15);
+	border-bottom: 2px solid black;
+	border-radius: 10%;
+}
+
+.btn-ver-mas {
+	margin: 20px;
+	border: 1px solid white !important;
+	border-radius: 30px !important;
+	background-color: black !important;
+}
+/*-------CARD-indumentaria-----*/
+.card-indumentaria {
+	margin-bottom: 25px;
+}
+
+.card-indumentaria:hover {
+	box-shadow: 10px 10px 9px 0px rgba(0,0,0,0.75);
 	position: relative;
-	top:-2px;
+	top: -2px;
 }
 
-.productoI:nth-child(1) {
-	grid-column: 1 / 4;	
-}
-.productoI:nth-child(2) {
-	grid-column: 4 / 7;
-}
-.productoI:nth-child(3) {
-	grid-column: 7 / 10;
-}
-.productoI:nth-child(4) {
-	grid-column: 10 / 13;
-}
-.productoI:nth-child(5) {
-	grid-column: 1 / 4;
-}
-.productoI:nth-child(6) {
-	grid-column: 4 / 7;
-}
-.productoI:nth-child(7) {
-	grid-column: 7 / 10;
-}
-.productoI:nth-child(8) {
-	grid-column: 10 / 13;
-}
-.productoI:nth-child(9) {
-	grid-column: 1 / 4;
-}
-.productoI:nth-child(10) {
-	grid-column: 4 / 7;
-}
-.productoI:nth-child(11) {
-	grid-column: 7 / 10;
-}
-.productoI:nth-child(12) {
-	grid-column: 10 / 13;
-}
+
+
+
+
+
 /*----------ACCESORIOS----------------------------------------*/
-.accesorios {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 1fr 1fr 1fr;
-	justify-content: center;
-	grid-gap: 10px;
-	width: 100%;
-	padding: 0px;
-	margin-top: 20px;
-	/*border: 2px solid white;*/
-}
 
-.productoA {
-	width: 100%;
-	color: white;
-	padding-top: 20px;
-	text-align: center;
-	/*border: 1px solid red;*/
-	justify-self: center;
-}
 
-.productoA img {
-	width: 75%;
 
-	border:2px solid black;
 
-}
 
-.productoA:nth-child(1) {
-	grid-column: 1 / 4;	
-}
-.productoA:nth-child(2) {
-	grid-column: 4 / 7;
-}
-.productoA:nth-child(3) {
-	grid-column: 7 / 10;
-}
-.productoA:nth-child(4) {
-	grid-column: 10 / 13;
-}
-.productoA:nth-child(5) {
-	grid-column: 1 / 4;
-}
-.productoA:nth-child(6) {
-	grid-column: 4 / 7;
-}
-.productoA:nth-child(7) {
-	grid-column: 7 / 10;
-}
-.productoA:nth-child(8) {
-	grid-column: 10 / 13;
-}
-.productoA:nth-child(9) {
-	grid-column: 1 / 4;
-}
-.productoA:nth-child(10) {
-	grid-column: 4 / 7;
-}
-.productoA:nth-child(11) {
-	grid-column: 7 / 10;
-}
-.productoA:nth-child(12) {
-	grid-column: 10 / 13;
-}
 
 /*----------BIJOUTERIE----------------------------------------*/
 
@@ -409,75 +366,47 @@
 }
 
 /*------------CONTACTO------------------------------------------------------*/
-.fondocontacto {
-	background-image: url(../imagenes/fondo.jpg);
-	
-	display: flex;
-	background-size: cover;
-	border: 1px solid;
-	
+.contenedor-contacto {
+	border:20px solid black;
+	max-height: 100%;
+	background-color: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(82,82,82,1) 89%, rgba(195,159,255,1) 100%);
 }
 
-.formulario {
+.contacto {
 	
+	color: white;
+	padding: 20px;
 	text-align: center;
 	
-	padding: 10px;
-	width: 100%;
-	height: 400px;
-	font-size: 20px;
-	font-family: serif, sans-serif;
-	border: 50px ridge grey;
-	box-shadow: 5px 10px;
-}
-
-.fieldset {
-
-	color: white;
-	width: 50%;
-	height: 200px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
-	padding: 30px;
-	margin: auto;
-	border: 20px ridge grey;
 	
 }
 
-.label {
-	display:block;
-	color: white;
-	/*border: 1px solid red;*/
+.contacto div {
+	
+	max-width: 75vw;
+	margin: auto;
 }
 
-.textareayboton {
+.logotipo-contacto {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-
+	justify-content: center;
 }
-
-#textarea {
-	resize: none;
-	text-align: left;
-	width: 200px;
-	height: 90px;
+.logotipo-contacto img {
+	max-width: 250px;
+	min-width: 180px;
 }
-
-.consultar { /*el boton de enviar*/
-	margin-top: 10px;
-	width: 100px;
-	align-self: center;
+.btn-contacto {
+	border-radius: 50px !important;
+	margin-top: 25px;
+	color: black !important;
+	background-color: white !important;
+	border:1px solid black !important;
 }
-.volverainicio a {
-	font-size: 20px;
-	color:white;
-	text-decoration: none;	
+.btn-contacto:hover {
+	background-color: #111 !important;
+	color: white !important;
+	border:1px solid white !important;
 }
-
 /*------------FOOTER-------------------------------------------------------------------*/
 
 .contenedor-footer {
@@ -493,10 +422,16 @@
 	font-size: 30px;
 	text-decoration: none;
 	margin: 5px;
-	color: white;
+	color: rgb(200,200,200);
 	background-color: rgb(50,50,200);
 	padding: 10px 12px;
 	border-radius: 10px; 
+	border: 1px solid rgb(200,200,200);
+}
+
+.iconos-footer a:hover {
+	color: white;
+	border:1px solid white;
 }
 /*--------------RESPONSIVE----------------------------------------------*/
 /*--------------RESPONSIVE----------------------------------------------*/
