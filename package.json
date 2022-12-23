@@ -1,0 +1,25 @@
+{
+  "name": "pre-entregas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SigelCr/Rehaciendo-la-pagina-con-BT.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SigelCr/Rehaciendo-la-pagina-con-BT.github.io/issues"
+  },
+  "homepage": "https://github.com/SigelCr/Rehaciendo-la-pagina-con-BT.github.io#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
