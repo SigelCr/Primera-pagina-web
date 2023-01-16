@@ -8,6 +8,7 @@
 body {
 	background: $background-principal;
 }
+/*wpp*/
 .btn-flotante {
 	position: fixed;
 	width: 55px;
@@ -114,14 +115,14 @@ body {
 	height: 70% !important;
 
 }
+
 .card {
 	margin: 10px auto;
 
 }
 /*------Carrusel------*/
 .carrusel {
-	border: 15px solid black;
-	border-radius: 200px;
+	border: 1px solid black;
 	background-color: white;
 	margin: 15px 0 15px 0;
 }
@@ -145,6 +146,14 @@ body {
 		padding-inline-start: 0px;
 	}
 }
+.subtitulo-sub li {
+	list-style-type: none;
+	text-decoration: none;
+
+	ul {
+		padding-inline-start: 0px;
+	}
+}
 /*correcion de errores que molestaban*/
 
 
@@ -156,7 +165,7 @@ body {
 
 .carrusel-img-indumentaria {
 	margin: auto;
-	width: 100%;
+	width: 90%;
 	max-height: 400px;
 	object-position: center;
 	border: 5px solid black;
@@ -197,6 +206,43 @@ body {
 	}
 }
 
+.subtitulo-sub {
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(0deg, rgba(11,77,5,1) 0%, rgba(11,88,5,1) 8%, rgba(5,255,0,1) 89%);
+	font-size: 15px;
+	border: 2px solid rgb(0, 0, 0);
+	border-radius: 50px;
+	padding-top: 10px;
+	max-width: 250px;
+	margin: 10px 0 10px 0;
+
+	
+    a {
+		display: block;
+		
+		text-align: center;
+        color: rgb(0, 0, 0);
+		border: 1px solid rgb(0, 0, 0);
+		border-radius: 50px;
+		padding: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 10px 0 10px 0;
+    
+    }
+    a:hover {
+        background-color: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+        
+    }
+	li {
+		margin-bottom: 10px;
+	}
+}
+
+
+
 .btn-ver-mas {
 	margin: 20px;
 	border: 1px solid white !important;
@@ -209,10 +255,10 @@ body {
 .btn-ver-mas-mio {
 	text-decoration: none;
 	padding: 5px;
-	color: black;
+	color: rgb(255, 255, 255);
 	border-radius: 50px;
-	background: white;
-	border: 2px solid black;
+	background: rgb(0, 0, 0);
+	border: 2px solid rgb(255, 255, 255);
 	
 
 	&:hover {
@@ -233,22 +279,6 @@ body {
 	
 }
 
-
-
-/*----------ACCESORIOS----------------------------------------*/
-
-
-
-
-
-
-/*----------BIJOUTERIE----------------------------------------*/
-
-
-/*------------PERFUMES------------------------------------------------------*/
-
-
-
 /*------------CONTACTO------------------------------------------------------*/
 .contenedor-contacto {
 	max-height: 100%;
@@ -264,6 +294,10 @@ body {
 	div {
 		max-width: 75vw;
 		margin: auto;
+	}
+
+	.form-label {
+		margin-top: 10px;
 	}
 }
 
@@ -330,9 +364,6 @@ body {
 	}
 }
 
-
-/*--------------RESPONSIVE----------------------------------------------*/
-/*--------------RESPONSIVE----------------------------------------------*/
 /*--------------RESPONSIVE-MOBILE---------------------------------------------*/
 
 @media (max-width: 540px) {
